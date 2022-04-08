@@ -84,20 +84,27 @@ Users can also share their own travel plans and view other users' public plans t
 
 **Flow Navigation** (Screen to Screen)
 
-* Home
-   * Folder Detail 
+* Home 
+   * Trip List Screen    
+   * Trip Detail 
        * Itinerary (default)
-           * Expense Edit Modal
+           * Edit Modal
        * Lodging
-           * Expense Edit Modal
+           * Edit Modal
        * Food
-           * Expense Edit Modal
+           * Edit Modal
        * Transportation
-           * Expense Edit Modal
+           * Edit Modal
        * Places
-           * Expense Edit Modal
+           * Edit Modal
 * Explore
-   * Folder Detail
+   * Explore List Screen  
+   * Explore Trip Detail
+       * Itinerary (default)
+       * Lodging
+       * Food
+       * Transportation
+       * Places
 * Profile
    * Profile Detail
        * Saved Travel Plans 
