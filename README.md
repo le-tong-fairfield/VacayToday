@@ -111,5 +111,5 @@ Users can also share their own travel plans and view other users' public plans t
            * Saved Travel Plan Detail
 
 ## Wireframes
-<img src="https://imgur.com/hfAjjyz"
+<img src="https://i.imgur.com/hfAjjyz.jpg"
 width=600>
