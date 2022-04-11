@@ -109,3 +109,10 @@ Users can also share their own travel plans and view other users' public plans t
    * Profile Detail
        * Saved Travel Plans 
            * Saved Travel Plan Detail
+
+## Wireframes
+[Add picture of your hand sketched wireframes in this section]
+<img src="<img width="1440" alt="Screen Shot 2022-04-10 at 23 46 54" src="https://user-images.githubusercontent.com/73024784/162662217-6114cb66-137a-4b3f-8192-7ab72dc5b871.png">
+" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
