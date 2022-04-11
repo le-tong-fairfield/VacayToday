@@ -112,7 +112,7 @@ Users can also share their own travel plans and view other users' public plans t
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://drive.google.com/file/d/12zBgewhG3mbK8JNtydb_jedmkNLKTn-H/view?usp=sharing
-" width=600>
+<img src="![277791721_726047842160166_4860378518662200062_n](https://user-images.githubusercontent.com/43898089/162663106-1d0a7452-b08b-4e25-b70d-a0c3e9df7457.jpg)"
+width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
