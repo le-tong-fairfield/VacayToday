@@ -13,6 +13,8 @@
 		4F56782C280E1A3400E98764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F56782A280E1A3400E98764 /* Main.storyboard */; };
 		4F56782E280E1A3600E98764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F56782D280E1A3600E98764 /* Assets.xcassets */; };
 		4F567831280E1A3600E98764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F56782F280E1A3600E98764 /* LaunchScreen.storyboard */; };
+		4F567839280E22A300E98764 /* Trip Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F567838280E22A300E98764 /* Trip Detail.storyboard */; };
+		4F56783D280E2FD400E98764 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 4F56783C280E2FD400E98764 /* Poppins */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4F56782D280E1A3600E98764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F567830280E1A3600E98764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F567832280E1A3600E98764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F567838280E22A300E98764 /* Trip Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Trip Detail.storyboard"; sourceTree = "<group>"; };
+		4F56783C280E2FD400E98764 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				4F56782D280E1A3600E98764 /* Assets.xcassets */,
 				4F56782F280E1A3600E98764 /* LaunchScreen.storyboard */,
 				4F567832280E1A3600E98764 /* Info.plist */,
+				4F567838280E22A300E98764 /* Trip Detail.storyboard */,
+				4F56783C280E2FD400E98764 /* Poppins */,
 			);
 			path = VacayToday;
 			sourceTree = "<group>";
@@ -125,9 +131,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F56783D280E2FD400E98764 /* Poppins in Resources */,
 				4F567831280E1A3600E98764 /* LaunchScreen.storyboard in Resources */,
 				4F56782E280E1A3600E98764 /* Assets.xcassets in Resources */,
 				4F56782C280E1A3400E98764 /* Main.storyboard in Resources */,
+				4F567839280E22A300E98764 /* Trip Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
