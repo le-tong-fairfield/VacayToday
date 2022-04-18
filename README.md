@@ -328,3 +328,20 @@ width=600>
            * GET: Get a trip's transportation records
        * Places
            * GET: Get a trip's places
+
+* Example network code snippet:
+```
+    // iOS
+    // (Read/GET) Query all posts where user is author
+    let query = PFQuery(className:"Post")
+    query.whereKey("author", equalTo: currentUser)
+    query.order(byDescending: "createdAt")
+    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+       if let error = error {
+          print(error.localizedDescription)
+       } else if let posts = posts {
+          print("Successfully retrieved \(posts.count) posts.")
+          // TODO: Do something with posts...
+       }
+    }
+```
