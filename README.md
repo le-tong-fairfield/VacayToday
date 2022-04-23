@@ -1,3 +1,6 @@
+Original App Design Project - README Template
+===
+
 # VacayToday
 
 ## Table of Contents
@@ -84,8 +87,8 @@ Users can also share their own travel plans and view other users' public plans t
 
 **Flow Navigation** (Screen to Screen)
 
-* Home 
-   * Trip List Screen    
+* Home
+   * Trip List Screen 
    * Trip Detail 
        * Itinerary (default)
            * Edit Modal
@@ -98,7 +101,7 @@ Users can also share their own travel plans and view other users' public plans t
        * Places
            * Edit Modal
 * Explore
-   * Explore List Screen  
+   * Explore List Screen
    * Explore Trip Detail
        * Itinerary (default)
        * Lodging
@@ -111,8 +114,12 @@ Users can also share their own travel plans and view other users' public plans t
            * Saved Travel Plan Detail
 
 ## Wireframes
-<img src="https://i.imgur.com/hfAjjyz.jpg"
-width=600>
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
 
 ## Schema 
 
@@ -166,73 +173,36 @@ width=600>
    | user_saved_trip_id      | String   | unique id of the trip and the user who saves it pairing |
    | user_id    | Pointer to USER     | id of user who saves the trip |
    | trip_id    | Pointer to TRIP     | trip id |
-   
-#### TRANSPORTATION
-
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | trans_id      | String   | unique id of the transportation record|
-   | trans_mode | String | transportation mode |
-   | from_location   | String     | departure location |
-   | to_location   | String     | arrival location |
-   | url  | String     | additional url to a relevant site |
-   | note | String | addition note about the transportation booking |
-   
-#### LODGING
-
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | lodg_id      | String   | unique id of the staying record|
-   | logd_type | String | lodging type |
-   | location_name   | String | name of the staying place (eg. hotel name) |
-   | location_address   | String | address of the staying place |
-   | location_contact  | String | location contact (eg. email, phone) |
-   | thumb_url | String | url of thumbnail illustration|
-  
-   
-#### EATING
-
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | eat_id      | String   | unique id of the eating record|
-   | recommendation | String | user's food recommendation |
-   | rating | Number | user's food rating (0 to 5)
-   | location_name   | String | eating location name |
-   | location_address   | String | address of eating location |
-   | location_contact   | String  | contact of eating location |
-   | thumb_url | String | url of thumbnail illustration|
-   
-
-#### PLACE
-
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | place_id      | String   | unique id of the place visited|
-   | place_name   | String | name of place |
-   | place_address   | String | address of place |
-   | thumb_url | String | url of thumbnail illustration|
-   
-   
+     
 #### ACTIVITY
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | act_id      | String   | unique id of the trip activity|
-   | trip_id | Pointer to TRIP | trip id of trip where this activity belongs to
-   | trans_id | Pointer to TRANSPORTATION | id of the transportation record associated to the activity |
-   | lodg_id | Pointer to LODGING | id of the lodging record associated to the activity |
-   | place_id | Pointer to PLACE | id of the place visited associated to the activity |
-   | eat_id | Pointer to EATING | id of the eating record associated to the activity |
+   | trip_id | Pointer to TRIP | trip id of trip where this activity belongs to |
+   | cat_id | Pointer to CATEGORY | category id of the activity |
    | act_title | String | activity title |
    | act_description | String | detail about the activity |
+   | location_name | String | name of location |
+   | location_address | String | address of location |
+   | location_contact | String | contact (phone/email) of location |
    | act_from | DateTime | when the activity starts |
    | act_to   | DateTime | when the activity ends |
    | is_booked | Boolean | whether a booking is made for the activity |
-   | place_n
+   | thumb_url | String | thumbnail url |
    | url  | String | additional url to a relevant site |
+   | trans_mode | String | transportation mode |
+   | rating | Number | user's food rating (0 to 5)|
+   | recommendation | String | user's food recommendation |
    | group_expense | Number| group pay of the activity |
    | paid_by | Pointer to USER | id of the user to pay the group expense in the activity|
    | note | String | addition note about the activity|
+   
+#### CATEGORY
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | cat_id  | String   | unique id of the activity category|
+   | cat      | String   | category name|
    
 #### USER_ACT
    | Property      | Type     | Description |
