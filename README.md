@@ -218,6 +218,7 @@ width=600>
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | act_id      | String   | unique id of the trip activity|
+   | trip_id | Pointer to TRIP | trip id of trip where this activity belongs to
    | trans_id | Pointer to TRANSPORTATION | id of the transportation record associated to the activity |
    | lodg_id | Pointer to LODGING | id of the lodging record associated to the activity |
    | place_id | Pointer to PLACE | id of the place visited associated to the activity |
