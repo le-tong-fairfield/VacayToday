@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBSegueAction func addSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        let hostingController = UIHostingController(coder: coder, rootView: ContentView())
+        hostingController!.view.backgroundColor = UIColor.clear
+        return hostingController
+    }
+    
 }
 
