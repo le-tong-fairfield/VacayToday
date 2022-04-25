@@ -42,14 +42,15 @@ Users can also share their own travel plans and view other users' public plans t
 3. User can logout
 4. User can create a profile
 5. User can create a trip folder 
-    a. User can create trip details inside the folder
-    b. User can switch between sub-tabs to view Itinerary (default), Lodging, Food, Transportation, Places
-    c. User can track expenses at different places on trip itinerary / Each tabs keep track of expenses, itinerary sums it up (choose 1)
-6. User can add friends and give them permission to modify specific travel plans
-4. User can choose to publish their folder 
-5. User can explore other peole's trip folders
-6. User can like others folders
-7. User can save the folders for later visit.
+6. User can create trip details inside the folder
+7. [x] User can switch between sub-tabs to view Itinerary (default), Lodging, Food, Transportation, Places
+8. [x] User can view and scroll through a list of activities (in Itinerary Tab), places (in Place Tab), and lodging (in Lodging Tab)
+9. User can track expenses at different places on trip itinerary / Each tabs keep track of expenses, itinerary sums it up (choose 1)
+10. User can add friends and give them permission to modify specific travel plans
+11. User can choose to publish their folder 
+12. User can explore other peole's trip folders
+13. User can like others folders
+14. User can save the folders for later visit.
 
 **Optional Nice-to-have Stories**
 
@@ -57,6 +58,10 @@ Users can also share their own travel plans and view other users' public plans t
 2. User can publish photos of their travel
 3. User can link items in internary to items in other tabs
 4. User can link their bookings from other applications to their travel folders
+
+### App Walkthrough GIF
+
+<img src="http://g.recordit.co/XEpokONsIo.gif" width=250><br>
 
 ### 2. Screen Archetypes
 * Launch Screen
