@@ -44,12 +44,13 @@ Users can also share their own travel plans and view other users' public plans t
 5. User can create a trip folder 
 6. User can create trip details inside the folder
 7. [x] User can switch between sub-tabs to view Itinerary (default), Lodging, Food, Transportation, Places
-8. User can track expenses at different places on trip itinerary / Each tabs keep track of expenses, itinerary sums it up (choose 1)
-9. User can add friends and give them permission to modify specific travel plans
-10. User can choose to publish their folder 
-11. User can explore other peole's trip folders
-12. User can like others folders
-13. User can save the folders for later visit.
+8. [x] User can view and scroll through a list of activities (in Itinerary Tab), places (in Place Tab), and lodging (in Lodging Tab)
+9. User can track expenses at different places on trip itinerary / Each tabs keep track of expenses, itinerary sums it up (choose 1)
+10. User can add friends and give them permission to modify specific travel plans
+11. User can choose to publish their folder 
+12. User can explore other peole's trip folders
+13. User can like others folders
+14. User can save the folders for later visit.
 
 **Optional Nice-to-have Stories**
 
