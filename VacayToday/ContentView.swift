@@ -11,7 +11,7 @@ struct ContentView: View{
     var body: some View {
         
         TabView{
-            Text("Home").tabItem{
+            Itinerary().tabItem{
                 Image(systemName: "house").font(.title)
             }
             Text("Profile").tabItem{
