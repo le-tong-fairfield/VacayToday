@@ -59,6 +59,10 @@ Users can also share their own travel plans and view other users' public plans t
 3. User can link items in internary to items in other tabs
 4. User can link their bookings from other applications to their travel folders
 
+### App Walkthrough GIF
+
+<img src="http://g.recordit.co/XEpokONsIo.gif" width=250><br>
+
 ### 2. Screen Archetypes
 * Launch Screen
     * User can see app logo
