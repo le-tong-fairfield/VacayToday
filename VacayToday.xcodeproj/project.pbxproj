@@ -18,6 +18,7 @@
 		4F8CC40628161A4800613313 /* ItineraryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CC40528161A4800613313 /* ItineraryTab.swift */; };
 		4F8CC40828161DE700613313 /* PlacesTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CC40728161DE700613313 /* PlacesTab.swift */; };
 		4F8CC40A281622C600613313 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CC409281622C600613313 /* Model.swift */; };
+		4F8CC40C281624FF00613313 /* LodgingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CC40B281624FF00613313 /* LodgingTab.swift */; };
 		4FA1F449281493870061A831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F448281493860061A831 /* ContentView.swift */; };
 		4FA1F44D2814BF5A0061A831 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F44C2814BF590061A831 /* Itinerary.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		4F8CC40528161A4800613313 /* ItineraryTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryTab.swift; sourceTree = "<group>"; };
 		4F8CC40728161DE700613313 /* PlacesTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTab.swift; sourceTree = "<group>"; };
 		4F8CC409281622C600613313 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4F8CC40B281624FF00613313 /* LodgingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingTab.swift; sourceTree = "<group>"; };
 		4FA1F448281493860061A831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FA1F44C2814BF590061A831 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,13 +79,14 @@
 				4FA1F44C2814BF590061A831 /* Itinerary.swift */,
 				4F8CC40528161A4800613313 /* ItineraryTab.swift */,
 				4F8CC40728161DE700613313 /* PlacesTab.swift */,
+				4F8CC40B281624FF00613313 /* LodgingTab.swift */,
+				4F8CC409281622C600613313 /* Model.swift */,
 				4F56782A280E1A3400E98764 /* Main.storyboard */,
 				4F56782D280E1A3600E98764 /* Assets.xcassets */,
 				4F56782F280E1A3600E98764 /* LaunchScreen.storyboard */,
 				4F567832280E1A3600E98764 /* Info.plist */,
 				4F567838280E22A300E98764 /* Trip Detail.storyboard */,
 				4F56783C280E2FD400E98764 /* Poppins */,
-				4F8CC409281622C600613313 /* Model.swift */,
 			);
 			path = VacayToday;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				4FA1F449281493870061A831 /* ContentView.swift in Sources */,
 				4F567827280E1A3400E98764 /* SceneDelegate.swift in Sources */,
 				4FA1F44D2814BF5A0061A831 /* Itinerary.swift in Sources */,
+				4F8CC40C281624FF00613313 /* LodgingTab.swift in Sources */,
 				4F8CC40628161A4800613313 /* ItineraryTab.swift in Sources */,
 				4F8CC40A281622C600613313 /* Model.swift in Sources */,
 			);

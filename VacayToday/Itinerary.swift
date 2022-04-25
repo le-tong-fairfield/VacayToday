@@ -105,7 +105,7 @@ struct ThirdTabView : View {
 
 struct FourthTabView : View {
     var body : some View {
-        Text("FourthTab")
+        LodgingTab()
     }
 }
 
