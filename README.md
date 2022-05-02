@@ -37,8 +37,8 @@ Users can also share their own travel plans and view other users' public plans t
 
 **Required Must-have Stories**
 
-1. User can create a new account
-2. User can login 
+1. [x]User can create a new account
+2. [x]User can login 
 3. User can logout
 4. User can create a profile
 5. User can create a trip folder 
