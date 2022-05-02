@@ -37,8 +37,8 @@ Users can also share their own travel plans and view other users' public plans t
 
 **Required Must-have Stories**
 
-1. [x]User can create a new account
-2. [x]User can login 
+1. [x] User can create a new account
+2. [x] User can login 
 3. User can logout
 4. User can create a profile
 5. User can create a trip folder 
@@ -62,6 +62,8 @@ Users can also share their own travel plans and view other users' public plans t
 ### App Walkthrough GIF
 
 <img src="http://g.recordit.co/XEpokONsIo.gif" width=250><br>
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/32797557/166179043-605598c1-b2d6-4cfc-b02b-65aac60333d3.gif)
 
 ### 2. Screen Archetypes
 * Launch Screen
