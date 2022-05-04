@@ -12,15 +12,16 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var setPasswordField: UITextField!
     
+    var modelController: ModelController!
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        modelController = ModelController()
     }
     
     @IBAction func onSignUp(_ sender: Any) {
         let url = URL(string: "https://vacaytoday.herokuapp.com/api/user/signup")!
-        // https://vacaytoday.herokuapp.com/api/user/getbyusername/atong
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         request.httpMethod = "POST"
         // add headers for the request
@@ -52,27 +53,28 @@ class RegisterViewController: UIViewController {
 //                    self.tableView.reloadData()
 //
                  if dataDictionary["statusCode"] as! Int == 200 {
+                     let userId = dataDictionary["user_id"] as! Int
+                     let username = dataDictionary["username"] as! String
+                     modelController.user = User(userId: userId, username: username)
+                     
+                     let encoder = JSONEncoder()
+                     if let encodedUser = try? encoder.encode(modelController.user) {
+                         defaults.set(encodedUser, forKey: "user")
+                     }
                      performSegue(withIdentifier: "signupSegue", sender: nil)
                  }
-
-                   
 
              }
         }
         task.resume()
-
-        
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // To access the child view of UINavigationController, we need this intermediate line
+        let tab = segue.destination as! UITabBarController
+        let nav = tab.viewControllers?[0] as! UINavigationController
+        let feedViewController = nav.topViewController as! FeedViewController
+        feedViewController.modelController = modelController;
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+}

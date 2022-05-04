@@ -28,7 +28,6 @@ class LoginViewController: UIViewController {
    
     @IBAction func onLogIn(_ sender: Any) {
         let url = URL(string: "https://vacaytoday.herokuapp.com/api/auth/login")!
-        // https://vacaytoday.herokuapp.com/api/user/getbyusername/atong
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         request.httpMethod = "POST"
         // add headers for the request
@@ -80,24 +79,11 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // To access the child view of UINavigationController, we need this intermediate line
-        let nav = segue.destination as! UINavigationController
-        let feedViewController = nav.topViewController as! FeedViewController
-        feedViewController.modelController = modelController;
+        if let tab = segue.destination as? UITabBarController {
+            let nav = tab.viewControllers?[0] as! UINavigationController
+            let feedViewController = nav.topViewController as! FeedViewController
+            feedViewController.modelController = modelController;
+        }
     }
-    
-   
-  
-    
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 
 }

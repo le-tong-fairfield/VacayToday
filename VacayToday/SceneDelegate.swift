@@ -21,15 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let savedUserData = defaults.object(forKey: "user") as? Data {
             let decoder = JSONDecoder()
             if let savedUser = try? decoder.decode(User.self, from: savedUserData) {
-                // Look for file named Main.storyboard
+                // Look for file named Login.storyboard
                 let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                // Look for navigation controller named FeedNavigationController in Main storyboard
-                let feedViewController = storyboard.instantiateViewController(withIdentifier: "FeedViewController")  as? FeedViewController
-                // set root view to feed page
-                window?.rootViewController = feedViewController
+                // Creat a tab bar controller named TabBarController in storyboard
+                let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                // Set to root view
+                window?.rootViewController = tabBarController
+                // Get first tab item navigation controller
+                let nav = tabBarController.viewControllers?[0] as! UINavigationController
+                // Get the view controller from the navigation controller
+                let feedViewController = nav.topViewController as! FeedViewController
+                // Pass model controller to feed view controller
                 let modelController = ModelController()
                 modelController.user = savedUser
-                feedViewController?.modelController = modelController
+                feedViewController.modelController = modelController
             }
         }
     }
