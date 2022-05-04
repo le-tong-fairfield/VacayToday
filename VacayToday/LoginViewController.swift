@@ -18,12 +18,13 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    var modelController: ModelController!
+    let defaults = UserDefaults.standard
+        
     override func viewDidLoad() {
-        print("in")
-       
+        modelController = ModelController()
     }
 
-        
    
     @IBAction func onLogIn(_ sender: Any) {
         let url = URL(string: "https://vacaytoday.herokuapp.com/api/auth/login")!
@@ -58,27 +59,30 @@ class LoginViewController: UIViewController {
 //                    self.tableView.reloadData()
 //
                  if dataDictionary["statusCode"] as! Int == 200 {
+                     let userId = dataDictionary["user_id"] as! Int
+                     let username = dataDictionary["username"] as! String
+                     modelController.user = User(userId: userId, username: username)
+                     
+                     let encoder = JSONEncoder()
+                     if let encodedUser = try? encoder.encode(modelController.user) {
+                         defaults.set(encodedUser, forKey: "user")
+                     }
                      performSegue(withIdentifier: "loginSegue", sender: nil)
                  }
                  
                  print(dataDictionary)
-                 
-                 
-                 
-                 
-               
-                     
-                 
-                    
-
-                    // TODO: Get the array of movies
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
              }
         }
         task.resume()
 
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // To access the child view of UINavigationController, we need this intermediate line
+        let nav = segue.destination as! UINavigationController
+        let feedViewController = nav.topViewController as! FeedViewController
+        feedViewController.modelController = modelController;
     }
     
    

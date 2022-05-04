@@ -8,11 +8,13 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-
+    
+    var modelController: ModelController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("logged\(modelController.user)")
     }
     
 

@@ -208,7 +208,7 @@
         <!--Feed View Controller-->
         <scene sceneID="0Md-fQ-KC0">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="c83-0v-hX3" customClass="FeedViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" modalPresentationStyle="fullScreen" id="c83-0v-hX3" customClass="FeedViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idG-7B-DYm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
