@@ -16,6 +16,13 @@
 		4F56783D280E2FD400E98764 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 4F56783C280E2FD400E98764 /* Poppins */; };
 		4FA1F449281493870061A831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F448281493860061A831 /* ContentView.swift */; };
 		70CE3E812822F40100D216C0 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E802822F40100D216C0 /* ModelController.swift */; };
+		70CE3E8928236F7900D216C0 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */; };
+		70CE3E8B2823702500D216C0 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8A2823702500D216C0 /* PlacesViewController.swift */; };
+		70CE3E8D282370D000D216C0 /* LodgingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8C282370D000D216C0 /* LodgingViewController.swift */; };
+		70CE3E8F2823719F00D216C0 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8E2823719F00D216C0 /* FoodViewController.swift */; };
+		70CE3E91282371C400D216C0 /* TransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E90282371C400D216C0 /* TransportationViewController.swift */; };
+		70CE3E932823720800D216C0 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E922823720800D216C0 /* TripViewController.swift */; };
+		70CE3E97282381E600D216C0 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E96282381E600D216C0 /* MovieTableViewCell.swift */; };
 		F90128B52814C09C009C0CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90128B32814C09C009C0CB4 /* Main.storyboard */; };
 		F92A9E812817616800443050 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E802817616800443050 /* FeedViewController.swift */; };
 		F92A9E83281761B000443050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E82281761B000443050 /* LoginViewController.swift */; };
@@ -35,6 +42,13 @@
 		4F56783C280E2FD400E98764 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		4FA1F448281493860061A831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70CE3E802822F40100D216C0 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
+		70CE3E8A2823702500D216C0 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		70CE3E8C282370D000D216C0 /* LodgingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingViewController.swift; sourceTree = "<group>"; };
+		70CE3E8E2823719F00D216C0 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		70CE3E90282371C400D216C0 /* TransportationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationViewController.swift; sourceTree = "<group>"; };
+		70CE3E922823720800D216C0 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		70CE3E96282381E600D216C0 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		F90128B42814C09C009C0CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F92A9E802817616800443050 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F92A9E82281761B000443050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +91,13 @@
 				4F567828280E1A3400E98764 /* ViewController.swift */,
 				4FA1F448281493860061A831 /* ContentView.swift */,
 				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
+				70CE3E922823720800D216C0 /* TripViewController.swift */,
+				70CE3E90282371C400D216C0 /* TransportationViewController.swift */,
+				70CE3E8E2823719F00D216C0 /* FoodViewController.swift */,
+				70CE3E8C282370D000D216C0 /* LodgingViewController.swift */,
+				70CE3E8A2823702500D216C0 /* PlacesViewController.swift */,
+				70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */,
+				70CE3E96282381E600D216C0 /* MovieTableViewCell.swift */,
 				70CE3E802822F40100D216C0 /* ModelController.swift */,
 				F90128B32814C09C009C0CB4 /* Main.storyboard */,
 				4F56782D280E1A3600E98764 /* Assets.xcassets */,
@@ -167,11 +188,18 @@
 			files = (
 				F92A9E83281761B000443050 /* LoginViewController.swift in Sources */,
 				4F567829280E1A3400E98764 /* ViewController.swift in Sources */,
+				70CE3E91282371C400D216C0 /* TransportationViewController.swift in Sources */,
+				70CE3E8B2823702500D216C0 /* PlacesViewController.swift in Sources */,
+				70CE3E8D282370D000D216C0 /* LodgingViewController.swift in Sources */,
+				70CE3E97282381E600D216C0 /* MovieTableViewCell.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
 				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
 				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,
 				70CE3E812822F40100D216C0 /* ModelController.swift in Sources */,
+				70CE3E932823720800D216C0 /* TripViewController.swift in Sources */,
+				70CE3E8928236F7900D216C0 /* ItineraryViewController.swift in Sources */,
 				4FA1F449281493870061A831 /* ContentView.swift in Sources */,
+				70CE3E8F2823719F00D216C0 /* FoodViewController.swift in Sources */,
 				4F567827280E1A3400E98764 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

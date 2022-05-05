@@ -17,26 +17,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        let defaults = UserDefaults.standard
-        if let savedUserData = defaults.object(forKey: "user") as? Data {
-            let decoder = JSONDecoder()
-            if let savedUser = try? decoder.decode(User.self, from: savedUserData) {
-                // Look for file named Login.storyboard
-                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                // Creat a tab bar controller named TabBarController in storyboard
-                let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                // Set to root view
-                window?.rootViewController = tabBarController
-                // Get first tab item navigation controller
-                let nav = tabBarController.viewControllers?[0] as! UINavigationController
-                // Get the view controller from the navigation controller
-                let feedViewController = nav.topViewController as! FeedViewController
-                // Pass model controller to feed view controller
-                let modelController = ModelController()
-                modelController.user = savedUser
-                feedViewController.modelController = modelController
-            }
-        }
+//        let defaults = UserDefaults.standard
+//        if let savedUserData = defaults.object(forKey: "user") as? Data {
+//            let decoder = JSONDecoder()
+//            if let savedUser = try? decoder.decode(User.self, from: savedUserData) {
+//                // Look for file named Login.storyboard
+//                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//                // Creat a tab bar controller named TabBarController in storyboard
+//                let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+//                // Set to root view
+//                window?.rootViewController = tabBarController
+//                // Get first tab item navigation controller
+//                let nav = tabBarController.viewControllers?[0] as! UINavigationController
+//                // Get the view controller from the navigation controller
+//                let feedViewController = nav.topViewController as! FeedViewController
+//                // Pass model controller to feed view controller
+//                let modelController = ModelController()
+//                modelController.user = savedUser
+//                feedViewController.modelController = modelController
+//            }
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
