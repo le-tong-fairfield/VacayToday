@@ -21,6 +21,7 @@
 		F92A9E83281761B000443050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E82281761B000443050 /* LoginViewController.swift */; };
 		F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97580CD281F759400C1A929 /* RegisterViewController.swift */; };
 		F9E9F3CB2814B1F800404B32 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E9F3CA2814B1F800404B32 /* Login.storyboard */; };
+		F9EDE81428234A0E00318A13 /* MyTripGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDE81328234A0E00318A13 /* MyTripGridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F92A9E82281761B000443050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F97580CD281F759400C1A929 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F9E9F3CA2814B1F800404B32 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F9EDE81328234A0E00318A13 /* MyTripGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				4F567826280E1A3400E98764 /* SceneDelegate.swift */,
 				4F567828280E1A3400E98764 /* ViewController.swift */,
 				4FA1F448281493860061A831 /* ContentView.swift */,
+				F9EDE81328234A0E00318A13 /* MyTripGridCell.swift */,
 				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
 				70CE3E802822F40100D216C0 /* ModelController.swift */,
 				F90128B32814C09C009C0CB4 /* Main.storyboard */,
@@ -169,6 +172,7 @@
 				4F567829280E1A3400E98764 /* ViewController.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
 				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
+				F9EDE81428234A0E00318A13 /* MyTripGridCell.swift in Sources */,
 				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,
 				70CE3E812822F40100D216C0 /* ModelController.swift in Sources */,
 				4FA1F449281493870061A831 /* ContentView.swift in Sources */,
