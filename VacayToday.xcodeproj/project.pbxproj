@@ -26,7 +26,11 @@
 		F90128B52814C09C009C0CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90128B32814C09C009C0CB4 /* Main.storyboard */; };
 		F92A9E812817616800443050 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E802817616800443050 /* FeedViewController.swift */; };
 		F92A9E83281761B000443050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E82281761B000443050 /* LoginViewController.swift */; };
+		F957076D2824C353004F1A96 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */; };
+		F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */; };
+		F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95707702824D215004F1A96 /* LodgingTableViewCell.swift */; };
 		F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97580CD281F759400C1A929 /* RegisterViewController.swift */; };
+		F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */; };
 		F9E9F3CB2814B1F800404B32 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E9F3CA2814B1F800404B32 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +56,11 @@
 		F90128B42814C09C009C0CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F92A9E802817616800443050 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F92A9E82281761B000443050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		F95707702824D215004F1A96 /* LodgingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingTableViewCell.swift; sourceTree = "<group>"; };
 		F97580CD281F759400C1A929 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationTableViewCell.swift; sourceTree = "<group>"; };
 		F9E9F3CA2814B1F800404B32 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,9 +101,13 @@
 				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
 				70CE3E922823720800D216C0 /* TripViewController.swift */,
 				70CE3E90282371C400D216C0 /* TransportationViewController.swift */,
+				F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */,
 				70CE3E8E2823719F00D216C0 /* FoodViewController.swift */,
+				F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */,
 				70CE3E8C282370D000D216C0 /* LodgingViewController.swift */,
+				F95707702824D215004F1A96 /* LodgingTableViewCell.swift */,
 				70CE3E8A2823702500D216C0 /* PlacesViewController.swift */,
+				F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */,
 				70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */,
 				70CE3E96282381E600D216C0 /* MovieTableViewCell.swift */,
 				70CE3E802822F40100D216C0 /* ModelController.swift */,
@@ -194,13 +206,17 @@
 				70CE3E97282381E600D216C0 /* MovieTableViewCell.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
 				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
+				F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */,
 				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,
+				F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */,
 				70CE3E812822F40100D216C0 /* ModelController.swift in Sources */,
 				70CE3E932823720800D216C0 /* TripViewController.swift in Sources */,
 				70CE3E8928236F7900D216C0 /* ItineraryViewController.swift in Sources */,
 				4FA1F449281493870061A831 /* ContentView.swift in Sources */,
 				70CE3E8F2823719F00D216C0 /* FoodViewController.swift in Sources */,
 				4F567827280E1A3400E98764 /* SceneDelegate.swift in Sources */,
+				F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */,
+				F957076D2824C353004F1A96 /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
