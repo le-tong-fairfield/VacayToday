@@ -6,5 +6,6 @@ target 'VacayToday' do
   use_frameworks!
 
   # Pods for VacayToday
+pod 'TagListView', '~> 1.0'
 
 end
