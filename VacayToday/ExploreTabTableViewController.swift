@@ -1,15 +1,18 @@
 //
-//  ExploreTableViewController.swift
+//  ExploreTabTableViewController.swift
 //  VacayToday
 //
-//  Created by Parker Fairfield on 5/4/22.
+//  Created by Parker Fairfield on 5/7/22.
 //
 
 import UIKit
 
-class ExploreTableViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+
+    
     
     @IBOutlet var tableView: UITableView!
+    
     
     var trips = [[String:Any]]()
     
@@ -68,7 +71,7 @@ class ExploreTableViewController: UIViewController, UITableViewDataSource,UITabl
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath:IndexPath ) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ExploreTableViewCell") as! ExploreTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExploreTabTableViewCell") as! ExploreTabTableViewCell
         
         let trip = trips[indexPath.row]
         let title = trip["name"]
@@ -80,7 +83,7 @@ class ExploreTableViewController: UIViewController, UITableViewDataSource,UITabl
         var people = String(peopleInt)
         
         cell.exploreTitleLabel.text = title as! String
-        cell.likesNumberLabel.text = likes as! String
+        cell.likeNumberLabel.text = likes as! String
         cell.explorePeopleLabel.text = people as! String
         
         
@@ -117,7 +120,7 @@ class ExploreTableViewController: UIViewController, UITableViewDataSource,UITabl
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
