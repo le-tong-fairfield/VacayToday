@@ -30,7 +30,11 @@
 		F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */; };
 		F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95707702824D215004F1A96 /* LodgingTableViewCell.swift */; };
 		F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97580CD281F759400C1A929 /* RegisterViewController.swift */; };
+		F9AD1C7628274554000BA308 /* TransportationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */; };
 		F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */; };
+		F9C03F8D2826027700699590 /* PlacesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */; };
+		F9C03F8F2826140500699590 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F8E2826140500699590 /* FoodDetailViewController.swift */; };
+		F9C03F9128261B7300699590 /* LodgingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F9028261B7300699590 /* LodgingDetailsViewController.swift */; };
 		F9E9F3CB2814B1F800404B32 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E9F3CA2814B1F800404B32 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +64,11 @@
 		F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F95707702824D215004F1A96 /* LodgingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingTableViewCell.swift; sourceTree = "<group>"; };
 		F97580CD281F759400C1A929 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationDetailsViewController.swift; sourceTree = "<group>"; };
 		F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationTableViewCell.swift; sourceTree = "<group>"; };
+		F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsViewController.swift; sourceTree = "<group>"; };
+		F9C03F8E2826140500699590 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		F9C03F9028261B7300699590 /* LodgingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingDetailsViewController.swift; sourceTree = "<group>"; };
 		F9E9F3CA2814B1F800404B32 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,16 +107,20 @@
 				4F567826280E1A3400E98764 /* SceneDelegate.swift */,
 				4F567828280E1A3400E98764 /* ViewController.swift */,
 				4FA1F448281493860061A831 /* ContentView.swift */,
-				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
 				70CE3E922823720800D216C0 /* TripViewController.swift */,
 				70CE3E90282371C400D216C0 /* TransportationViewController.swift */,
 				F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */,
+				F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */,
 				70CE3E8E2823719F00D216C0 /* FoodViewController.swift */,
 				F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */,
+				F9C03F8E2826140500699590 /* FoodDetailViewController.swift */,
+				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
 				70CE3E8C282370D000D216C0 /* LodgingViewController.swift */,
 				F95707702824D215004F1A96 /* LodgingTableViewCell.swift */,
+				F9C03F9028261B7300699590 /* LodgingDetailsViewController.swift */,
 				70CE3E8A2823702500D216C0 /* PlacesViewController.swift */,
 				F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */,
+				F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */,
 				70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */,
 				70CE3E802822F40100D216C0 /* ModelController.swift */,
 				F90128B32814C09C009C0CB4 /* Main.storyboard */,
@@ -205,17 +217,21 @@
 				70CE3E8D282370D000D216C0 /* LodgingViewController.swift in Sources */,
 				70E0342928274566001412CE /* ActTableViewCell.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
+				F9C03F8D2826027700699590 /* PlacesDetailsViewController.swift in Sources */,
 				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
 				F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */,
 				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,
 				F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */,
 				70CE3E812822F40100D216C0 /* ModelController.swift in Sources */,
 				70CE3E932823720800D216C0 /* TripViewController.swift in Sources */,
+				F9C03F9128261B7300699590 /* LodgingDetailsViewController.swift in Sources */,
 				70CE3E8928236F7900D216C0 /* ItineraryViewController.swift in Sources */,
+				F9C03F8F2826140500699590 /* FoodDetailViewController.swift in Sources */,
 				4FA1F449281493870061A831 /* ContentView.swift in Sources */,
 				70CE3E8F2823719F00D216C0 /* FoodViewController.swift in Sources */,
 				4F567827280E1A3400E98764 /* SceneDelegate.swift in Sources */,
 				F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */,
+				F9AD1C7628274554000BA308 /* TransportationDetailsViewController.swift in Sources */,
 				F957076D2824C353004F1A96 /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
