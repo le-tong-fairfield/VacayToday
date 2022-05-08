@@ -142,6 +142,27 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell;
         }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let act = acts[indexPath.row]
+        let catId = act["category"] as! Int
+        
+        switch(catId) {
+        case 1:
+            performSegue(withIdentifier: "placeDetailSegue", sender: act)
+            break;
+        case 2:
+            performSegue(withIdentifier: "foodDetailSegue", sender: act)
+            break;
+        case 3:
+            performSegue(withIdentifier: "lodgingDetailSegue", sender: act)
+            break;
+        default:
+            performSegue(withIdentifier: "transportDetailSegue", sender: act)
+            break;
+        }
+        
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -187,6 +208,30 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
     // Disallow typing in text field
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let act = sender as! [String:Any]
+        let seg = segue.identifier
+        
+        switch(seg) {
+        case "placeDetailSegue":
+            let detailsViewController = segue.destination as! PlacesDetailsViewController
+            detailsViewController.place = act
+            break;
+        case "foodDetailSegue":
+            let detailsViewController = segue.destination as! FoodDetailViewController
+            detailsViewController.food = act
+            break;
+        case "lodgingDetailSegue":
+            let detailsViewController = segue.destination as! LodgingDetailsViewController
+            detailsViewController.lodging = act
+            break;
+        default:
+            let detailsViewController = segue.destination as! TransportationDetailsViewController
+            detailsViewController.transportation = act
+            break;
+        }
     }
     
 }

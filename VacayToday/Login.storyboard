@@ -1541,6 +1541,10 @@
                     <connections>
                         <outlet property="actTableView" destination="8B4-o9-B4y" id="saZ-hD-XRX"/>
                         <outlet property="dateText" destination="MVg-LZ-ha9" id="bJN-PP-SK2"/>
+                        <segue destination="BC9-ea-8V5" kind="presentation" identifier="placeDetailSegue" id="9J4-eU-EI9"/>
+                        <segue destination="Or1-Kx-nsv" kind="presentation" identifier="foodDetailSegue" id="fhk-tO-egI"/>
+                        <segue destination="YfC-UG-YHC" kind="presentation" identifier="lodgingDetailSegue" id="7Bq-x6-FEP"/>
+                        <segue destination="WYu-mH-i0n" kind="presentation" identifier="transportDetailSegue" id="cYB-fz-Q54"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMl-4w-7E7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1694,6 +1698,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="cYB-fz-Q54"/>
+        <segue reference="fhk-tO-egI"/>
+        <segue reference="7Bq-x6-FEP"/>
+        <segue reference="9J4-eU-EI9"/>
         <segue reference="hPW-S9-4d9"/>
         <segue reference="8b8-8u-QCt"/>
     </inferredMetricsTieBreakers>
