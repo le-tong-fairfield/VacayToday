@@ -1108,10 +1108,10 @@
             </objects>
             <point key="canvasLocation" x="6588" y="-29"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Lodging Navigation Controller-->
         <scene sceneID="zD2-Yi-ppD">
             <objects>
-                <navigationController id="aV8-QS-eIg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LodgingNavigationController" id="aV8-QS-eIg" customClass="LodgingNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zkz-DW-G0e">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1124,10 +1124,10 @@
             </objects>
             <point key="canvasLocation" x="4959" y="-29"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Places Navigation Controller-->
         <scene sceneID="27s-eO-0af">
             <objects>
-                <navigationController id="II6-Z4-xrU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PlacesNavigationController" id="II6-Z4-xrU" customClass="PlacesNavigationController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rnd-G8-b0N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1140,10 +1140,10 @@
             </objects>
             <point key="canvasLocation" x="5014" y="-1133"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Food Navigation Controller-->
         <scene sceneID="GFc-Fz-SyC">
             <objects>
-                <navigationController id="7FN-Y0-Ucm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FoodNavigationController" id="7FN-Y0-Ucm" customClass="FoodNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fFg-6L-RrC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1551,10 +1551,10 @@
             </objects>
             <point key="canvasLocation" x="4187" y="-1671"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Itinerary Navigation Controller-->
         <scene sceneID="h5y-dO-z6A">
             <objects>
-                <navigationController id="blJ-bo-Dw4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ItineraryNavigationController" id="blJ-bo-Dw4" customClass="ItineraryNavigationController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xi-AZ-P3A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

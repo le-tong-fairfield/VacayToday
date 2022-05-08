@@ -47,7 +47,6 @@ class TripViewController: UIViewController, UITabBarDelegate {
             lodgingView.isHidden = true
             transportView.isHidden = true
             embeddedItinerary.reloadData()
-
             break;
             
             case 2:
@@ -93,28 +92,29 @@ class TripViewController: UIViewController, UITabBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ItineraryViewController,
-                    segue.identifier == "itinerarySegue" {
+        let dest = segue.destination as! UINavigationController
+        if segue.identifier == "itinerarySegue" {
+            let vc = dest.topViewController as! ItineraryViewController
             self.embeddedItinerary = vc
         }
         
-        if let vc = segue.destination as? PlacesViewController,
-            segue.identifier == "placesSegue" {
+        if segue.identifier == "placesSegue" {
+            let vc = dest.topViewController as! PlacesViewController
             self.embeddedPlaces = vc
         }
         
-        if let vc = segue.destination as? FoodViewController,
-            segue.identifier == "foodSegue" {
+        if segue.identifier == "foodSegue" {
+            let vc = dest.topViewController as! FoodViewController
             self.embeddedFood = vc
         }
         
-        if let vc = segue.destination as? LodgingViewController,
-            segue.identifier == "lodgingSegue" {
+        if segue.identifier == "lodgingSegue" {
+            let vc = dest.topViewController as! LodgingViewController
             self.embeddedLodging = vc
         }
         
-        if let vc = segue.destination as? TransportationViewController,
-            segue.identifier == "transportSegue" {
+        if segue.identifier == "transportSegue" {
+            let vc = dest.topViewController as! TransportationViewController
             self.embeddedTransport = vc
         }
     }
