@@ -210,8 +210,12 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
         return false
     }
     
+    @IBAction func onAddAct(_ sender: Any) {
+        performSegue(withIdentifier: "addActSegue", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let act = sender as! [String:Any]
+        let act = sender as? [String:Any]
         let seg = segue.identifier
         
         switch(seg) {
@@ -227,9 +231,11 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             let detailsViewController = segue.destination as! LodgingDetailsViewController
             detailsViewController.lodging = act
             break;
-        default:
+        case "transportDetailSegue":
             let detailsViewController = segue.destination as! TransportationDetailsViewController
             detailsViewController.transportation = act
+            break;
+        default:
             break;
         }
     }

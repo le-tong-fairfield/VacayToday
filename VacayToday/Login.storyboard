@@ -1530,7 +1530,8 @@
                                     <color key="baseBackgroundColor" red="0.52156862749999999" green="0.86666666670000003" blue="0.97647058819999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dZK-fO-ZGe" kind="presentation" id="Bvk-UD-NWf"/>
+                                    <action selector="onAddAct:" destination="y4Y-Ky-7Ze" eventType="touchUpInside" id="kvT-w0-8dh"/>
+                                    <segue destination="dZK-fO-ZGe" kind="presentation" identifier="addActSegue" id="Bvk-UD-NWf"/>
                                 </connections>
                             </button>
                         </subviews>
