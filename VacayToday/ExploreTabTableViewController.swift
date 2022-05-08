@@ -19,7 +19,7 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 200
+        tableView.rowHeight = 210
    
 
         
@@ -37,7 +37,7 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
                  
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
 
-                    self.trips = dataDictionary as![[String:Any]]
+                 self.trips = dataDictionary
 //
 //
                     self.tableView.reloadData()
@@ -77,14 +77,14 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
         let title = trip["name"]
         
         let likesInt = trip["likes"] as! Int
-        var likes = String(likesInt)
+        let likes = String(likesInt)
         
         let peopleInt = trip["num_people"] as! Int
-        var people = String(peopleInt)
+        let people = String(peopleInt)
         
-        cell.exploreTitleLabel.text = title as! String
-        cell.likeNumberLabel.text = likes as! String
-        cell.explorePeopleLabel.text = people as! String
+        cell.exploreTitleLabel.text = title as? String
+        cell.likeNumberLabel.text = likes
+        cell.explorePeopleLabel.text = people + " people"
         
         
         return cell
