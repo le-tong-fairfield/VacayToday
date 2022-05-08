@@ -58,8 +58,10 @@ class FoodViewController: UIViewController, UITableViewDataSource,UITableViewDel
         let food = foods[indexPath.row]
         
         let title = food["act_title"] as! String
-        let ratingNumber = food["rating"] as! Int
-        var rating = String(ratingNumber)
+        var rating = ""
+        if let ratingNumber = food["rating"] as? Int {
+            rating = String(ratingNumber)
+        }
         
         let recommendation = food["recommendation"] as! String
         

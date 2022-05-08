@@ -744,7 +744,7 @@
             <objects>
                 <viewController id="v9a-Yh-9Rd" customClass="PlacesViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E5j-VO-FEc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m9Q-qK-QBX">
@@ -908,7 +908,7 @@
             <objects>
                 <viewController id="c3i-nK-A4U" customClass="LodgingViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0x-1v-KfF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pZd-na-vDN">
@@ -1112,7 +1112,7 @@
         <scene sceneID="zD2-Yi-ppD">
             <objects>
                 <navigationController storyboardIdentifier="LodgingNavigationController" id="aV8-QS-eIg" customClass="LodgingNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zkz-DW-G0e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Zkz-DW-G0e">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1128,7 +1128,7 @@
         <scene sceneID="27s-eO-0af">
             <objects>
                 <navigationController storyboardIdentifier="PlacesNavigationController" id="II6-Z4-xrU" customClass="PlacesNavigationController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rnd-G8-b0N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rnd-G8-b0N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1144,7 +1144,7 @@
         <scene sceneID="GFc-Fz-SyC">
             <objects>
                 <navigationController storyboardIdentifier="FoodNavigationController" id="7FN-Y0-Ucm" customClass="FoodNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fFg-6L-RrC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fFg-6L-RrC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1161,7 +1161,7 @@
             <objects>
                 <viewController id="WlX-z3-yaF" customClass="FoodViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8jB-qV-R8n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-RR-OIP">
@@ -1325,7 +1325,7 @@
             <objects>
                 <viewController id="Y70-GL-9Ld" customClass="TransportationViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Od-4v-plr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tg3-Ic-zfm">
@@ -1422,11 +1422,11 @@
             <objects>
                 <viewController id="y4Y-Ky-7Ze" customClass="ItineraryViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmE-5i-SfR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8B4-o9-B4y">
-                                <rect key="frame" x="0.0" y="86" width="414" height="574"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="586"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -1514,7 +1514,7 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="MVg-LZ-ha9">
-                                <rect key="frame" x="20" y="44" width="177" height="34"/>
+                                <rect key="frame" x="20" y="14" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.52156862745098043" green="0.8666666666666667" blue="0.97647058823529409" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -1522,7 +1522,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="date-time"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0B-xc-CA1">
-                                <rect key="frame" x="350" y="44" width="44" height="31"/>
+                                <rect key="frame" x="350" y="14" width="44" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
@@ -1550,13 +1550,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMl-4w-7E7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4187" y="-1671"/>
+            <point key="canvasLocation" x="4186.9565217391309" y="-1671.4285714285713"/>
         </scene>
         <!--Itinerary Navigation Controller-->
         <scene sceneID="h5y-dO-z6A">
             <objects>
                 <navigationController storyboardIdentifier="ItineraryNavigationController" id="blJ-bo-Dw4" customClass="ItineraryNavigationController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xi-AZ-P3A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="6xi-AZ-P3A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1685,7 +1685,7 @@
         <scene sceneID="ZFt-At-eJu">
             <objects>
                 <navigationController id="R7e-NF-7RX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k5C-SS-TV5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="k5C-SS-TV5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
