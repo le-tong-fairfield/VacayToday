@@ -15,6 +15,15 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var food: [String:Any]!
+    
+    func reservation(isBooked:Bool) -> String{
+        if (isBooked){
+            return ("Reserved")
+        }
+        else{
+            return("No reservation")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +32,7 @@ class FoodDetailViewController: UIViewController {
         detailTitleLabel.text = food["act_title"] as? String
         addressLabel.text = food["location_address"] as? String
         descriptionLabel.text = food["act_description"]as? String
-//        reservationLabel.text = String((food["is_booked"] as? String)!)
+        reservationLabel.text = reservation(isBooked: (food["is_Booked"] != nil)) as? String
 
     }
     

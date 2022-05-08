@@ -31,6 +31,30 @@ class TransportationDetailsViewController: UIViewController {
         return finaldate
     }
     
+    func subtractDate(fromDate:String, toDate:String) -> Int{
+        
+        
+        let str = fromDate
+        let str2 = toDate
+        let dateFor: DateFormatter = DateFormatter()
+        dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        let yourDate: NSDate? = dateFor.date(from: str) as NSDate?
+        let yourDate2: NSDate? = dateFor.date(from: str2) as NSDate?
+        let calendar = NSCalendar.current
+//        // Set time to 00:00
+        let date1 = yourDate
+        let date2 = yourDate2
+        // Subtract the two dates
+        let components = calendar.dateComponents([.day, .month, .year, .hour],from: date1 as! Date, to: date2 as! Date)
+        
+        print(components.hour!)
+
+        
+        
+        return components.hour!
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +64,10 @@ class TransportationDetailsViewController: UIViewController {
         
         departureLocationArrival.text = transportation["location_name"] as? String
         arrivalLocationLabel.text = transportation["location_name"] as? String
+        
+        travelDurationLabel.text = String(subtractDate(fromDate: transportation["act_from"] as! String, toDate: transportation["act_to"] as! String)) + " hour"
+        
+        print(subtractDate(fromDate: "2013-10-13T19:16:00.000Z", toDate: "2013-10-14T04:16:00.000Z"))
 
     }
     
