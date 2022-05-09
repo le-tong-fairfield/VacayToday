@@ -25,7 +25,30 @@
 		F92A9E83281761B000443050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E82281761B000443050 /* LoginViewController.swift */; };
 		F92E75D728276306007BEB43 /* ExploreTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E75D628276306007BEB43 /* ExploreTabTableViewController.swift */; };
 		F92E75D928276348007BEB43 /* ExploreTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E75D828276348007BEB43 /* ExploreTabTableViewCell.swift */; };
+		70CE3E8928236F7900D216C0 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */; };
+		70CE3E8B2823702500D216C0 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8A2823702500D216C0 /* PlacesViewController.swift */; };
+		70CE3E8D282370D000D216C0 /* LodgingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8C282370D000D216C0 /* LodgingViewController.swift */; };
+		70CE3E8F2823719F00D216C0 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E8E2823719F00D216C0 /* FoodViewController.swift */; };
+		70CE3E91282371C400D216C0 /* TransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E90282371C400D216C0 /* TransportationViewController.swift */; };
+		70CE3E932823720800D216C0 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E922823720800D216C0 /* TripViewController.swift */; };
+		70E0342928274566001412CE /* ActTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E0342828274566001412CE /* ActTableViewCell.swift */; };
+		F90128B52814C09C009C0CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90128B32814C09C009C0CB4 /* Main.storyboard */; };
+		F92A9E812817616800443050 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E802817616800443050 /* FeedViewController.swift */; };
+		F92A9E83281761B000443050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E82281761B000443050 /* LoginViewController.swift */; };
+		F955A8CD2828D0C100E528A7 /* CreateLodgingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955A8CC2828D0C000E528A7 /* CreateLodgingViewController.swift */; };
+		F955A8CF2828DD5F00E528A7 /* CreateTransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955A8CE2828DD5F00E528A7 /* CreateTransportationViewController.swift */; };
+		F955A8D12828E2B400E528A7 /* CreatePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955A8D02828E2B400E528A7 /* CreatePlaceViewController.swift */; };
+		F957076D2824C353004F1A96 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */; };
+		F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */; };
+		F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95707702824D215004F1A96 /* LodgingTableViewCell.swift */; };
 		F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97580CD281F759400C1A929 /* RegisterViewController.swift */; };
+		F984292628288D9200EAB286 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984292528288D9200EAB286 /* CategoryViewController.swift */; };
+		F984292828288DAC00EAB286 /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984292728288DAC00EAB286 /* CreateActivityViewController.swift */; };
+		F9AD1C7628274554000BA308 /* TransportationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */; };
+		F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */; };
+		F9C03F8D2826027700699590 /* PlacesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */; };
+		F9C03F8F2826140500699590 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F8E2826140500699590 /* FoodDetailViewController.swift */; };
+		F9C03F9128261B7300699590 /* LodgingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F9028261B7300699590 /* LodgingDetailsViewController.swift */; };
 		F9E9F3CB2814B1F800404B32 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E9F3CA2814B1F800404B32 /* Login.storyboard */; };
 		F9EDE81428234A0E00318A13 /* MyTripGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDE81328234A0E00318A13 /* MyTripGridCell.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +74,30 @@
 		F92A9E82281761B000443050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F92E75D628276306007BEB43 /* ExploreTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTabTableViewController.swift; sourceTree = "<group>"; };
 		F92E75D828276348007BEB43 /* ExploreTabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTabTableViewCell.swift; sourceTree = "<group>"; };
+		70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
+		70CE3E8A2823702500D216C0 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		70CE3E8C282370D000D216C0 /* LodgingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingViewController.swift; sourceTree = "<group>"; };
+		70CE3E8E2823719F00D216C0 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		70CE3E90282371C400D216C0 /* TransportationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationViewController.swift; sourceTree = "<group>"; };
+		70CE3E922823720800D216C0 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		70E0342828274566001412CE /* ActTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActTableViewCell.swift; sourceTree = "<group>"; };
+		F90128B42814C09C009C0CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F92A9E802817616800443050 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F92A9E82281761B000443050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F955A8CC2828D0C000E528A7 /* CreateLodgingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLodgingViewController.swift; sourceTree = "<group>"; };
+		F955A8CE2828DD5F00E528A7 /* CreateTransportationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransportationViewController.swift; sourceTree = "<group>"; };
+		F955A8D02828E2B400E528A7 /* CreatePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewController.swift; sourceTree = "<group>"; };
+		F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		F95707702824D215004F1A96 /* LodgingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingTableViewCell.swift; sourceTree = "<group>"; };
 		F97580CD281F759400C1A929 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F984292528288D9200EAB286 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F984292728288DAC00EAB286 /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
+		F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationDetailsViewController.swift; sourceTree = "<group>"; };
+		F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationTableViewCell.swift; sourceTree = "<group>"; };
+		F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsViewController.swift; sourceTree = "<group>"; };
+		F9C03F8E2826140500699590 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		F9C03F9028261B7300699590 /* LodgingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingDetailsViewController.swift; sourceTree = "<group>"; };
 		F9E9F3CA2814B1F800404B32 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F9EDE81328234A0E00318A13 /* MyTripGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +142,6 @@
 			children = (
 				4F567824280E1A3400E98764 /* AppDelegate.swift */,
 				4F567826280E1A3400E98764 /* SceneDelegate.swift */,
-				4F567828280E1A3400E98764 /* ViewController.swift */,
 				4FA1F448281493860061A831 /* ContentView.swift */,
 				F9EDE81328234A0E00318A13 /* MyTripGridCell.swift */,
 				F92E75D628276306007BEB43 /* ExploreTabTableViewController.swift */,
@@ -104,6 +149,23 @@
 				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
 				70DE2AFA2828F88F00D62F37 /* TabBarController.swift */,
 				70DE2AF62828915500D62F37 /* EditTripViewController.swift */,
+				70CE3E922823720800D216C0 /* TripViewController.swift */,
+				4F567828280E1A3400E98764 /* ViewController.swift */,
+				70CE3E90282371C400D216C0 /* TransportationViewController.swift */,
+				F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */,
+				F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */,
+				70CE3E8E2823719F00D216C0 /* FoodViewController.swift */,
+				F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */,
+				F9C03F8E2826140500699590 /* FoodDetailViewController.swift */,
+				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
+				70CE3E8C282370D000D216C0 /* LodgingViewController.swift */,
+				F95707702824D215004F1A96 /* LodgingTableViewCell.swift */,
+				F9C03F9028261B7300699590 /* LodgingDetailsViewController.swift */,
+				70CE3E8A2823702500D216C0 /* PlacesViewController.swift */,
+				F957076C2824C353004F1A96 /* PlacesTableViewCell.swift */,
+				F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */,
+				70E0342828274566001412CE /* ActTableViewCell.swift */,
+				70CE3E8828236F7900D216C0 /* ItineraryViewController.swift */,
 				70CE3E802822F40100D216C0 /* ModelController.swift */,
 				F90128B32814C09C009C0CB4 /* Main.storyboard */,
 				4F56782D280E1A3600E98764 /* Assets.xcassets */,
@@ -116,6 +178,11 @@
 				F97580CD281F759400C1A929 /* RegisterViewController.swift */,
 				4F29200E28283951000237BA /* ManageTripViewController.swift */,
 				4F237BC428289D8F00238555 /* ProfileViewController.swift */,
+				F984292528288D9200EAB286 /* CategoryViewController.swift */,
+				F984292728288DAC00EAB286 /* CreateActivityViewController.swift */,
+				F955A8CC2828D0C000E528A7 /* CreateLodgingViewController.swift */,
+				F955A8CE2828DD5F00E528A7 /* CreateTransportationViewController.swift */,
+				F955A8D02828E2B400E528A7 /* CreatePlaceViewController.swift */,
 			);
 			path = VacayToday;
 			sourceTree = "<group>";
@@ -206,9 +273,32 @@
 				F9EDE81428234A0E00318A13 /* MyTripGridCell.swift in Sources */,
 				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,
 				4F29200F28283951000237BA /* ManageTripViewController.swift in Sources */,
+				F955A8D12828E2B400E528A7 /* CreatePlaceViewController.swift in Sources */,
+				70CE3E91282371C400D216C0 /* TransportationViewController.swift in Sources */,
+				70CE3E8B2823702500D216C0 /* PlacesViewController.swift in Sources */,
+				F984292828288DAC00EAB286 /* CreateActivityViewController.swift in Sources */,
+				F984292628288D9200EAB286 /* CategoryViewController.swift in Sources */,
+				70CE3E8D282370D000D216C0 /* LodgingViewController.swift in Sources */,
+				F955A8CD2828D0C100E528A7 /* CreateLodgingViewController.swift in Sources */,
+				70E0342928274566001412CE /* ActTableViewCell.swift in Sources */,
+				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
+				F9C03F8D2826027700699590 /* PlacesDetailsViewController.swift in Sources */,
+				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
+				F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */,
+				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,
+				F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */,
 				70CE3E812822F40100D216C0 /* ModelController.swift in Sources */,
+				70CE3E932823720800D216C0 /* TripViewController.swift in Sources */,
+				F9C03F9128261B7300699590 /* LodgingDetailsViewController.swift in Sources */,
+				70CE3E8928236F7900D216C0 /* ItineraryViewController.swift in Sources */,
+				F9C03F8F2826140500699590 /* FoodDetailViewController.swift in Sources */,
 				4FA1F449281493870061A831 /* ContentView.swift in Sources */,
+				70CE3E8F2823719F00D216C0 /* FoodViewController.swift in Sources */,
+				F955A8CF2828DD5F00E528A7 /* CreateTransportationViewController.swift in Sources */,
 				4F567827280E1A3400E98764 /* SceneDelegate.swift in Sources */,
+				F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */,
+				F9AD1C7628274554000BA308 /* TransportationDetailsViewController.swift in Sources */,
+				F957076D2824C353004F1A96 /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
