@@ -108,6 +108,7 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             let timeFrom = act["act_from"] as! String
             let timeTo = act["act_to"] as! String
             let catId = act["category"]
+            let expense = act["expense"]
             
             let systemIcon: String = getCatIcon(catId: catId as! Int);
 
@@ -137,6 +138,17 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.timeToLabel.text = finalTimeTo
             cell.title.text = title
             cell.address.text = address
+            
+            
+            let cost = act["expense"] ?? 0
+            print(cost)
+            
+            if cost is NSNull{
+                cell.expense.text = "0"
+            }else{
+                cell.expense.text = String((expense as? Int)!)
+                
+            }
 
             cell.icon.image = UIImage(systemName: systemIcon)?.withTintColor(.darkGray, renderingMode: .alwaysOriginal)
             return cell;

@@ -13,7 +13,8 @@ class TransportationDetailsViewController: UIViewController {
     @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var arrivalTimeLabel: UILabel!
     @IBOutlet weak var departureTimeLabel: UILabel!
-    @IBOutlet var costLabel: UIView!
+    
+    @IBOutlet var costLabel: UILabel!
     @IBOutlet weak var departureLocationArrival: UILabel!
     @IBOutlet weak var arrivalLocationLabel: UILabel!
     
@@ -64,6 +65,8 @@ class TransportationDetailsViewController: UIViewController {
         
         departureLocationArrival.text = transportation["location_name"] as? String
         arrivalLocationLabel.text = transportation["location_name"] as? String
+        
+        costLabel.text = String((transportation["expense"] as? Int)!)
         
         travelDurationLabel.text = String(subtractDate(fromDate: transportation["act_from"] as! String, toDate: transportation["act_to"] as! String)) + " hour"
         

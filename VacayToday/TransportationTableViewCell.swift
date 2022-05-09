@@ -12,7 +12,8 @@ class TransportationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateToLabel: UILabel!
     @IBOutlet weak var locationToLabel: UILabel!
-    @IBOutlet weak var costLabel: UILabel!
+  
+    @IBOutlet var costLabel: UILabel!
     @IBOutlet weak var dateFromLabel: UILabel!
     @IBOutlet weak var locationFromLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!

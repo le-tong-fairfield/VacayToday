@@ -8,7 +8,15 @@
 import UIKit
 
 class TripViewController: UIViewController, UITabBarDelegate {
+    
+    @IBOutlet var timeLabel: UILabel!
+    
 
+    @IBOutlet var titleLabel: UILabel!
+    
+  
+    
+    
     @IBOutlet weak var tab: UITabBar!
     
     @IBOutlet weak var transportView: UIView!
@@ -23,8 +31,57 @@ class TripViewController: UIViewController, UITabBarDelegate {
     private var embeddedLodging : LodgingViewController!;
     private var embeddedTransport : TransportationViewController!;
     
+    func parseDate2(date:String)->String{
+        let dateFor: DateFormatter = DateFormatter(); dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        let yourDate: NSDate? = dateFor.date(from: date) as NSDate?
+        let dateFormatterPrint = DateFormatter();
+        dateFormatterPrint.dateFormat = "MMMM dd, YYYY"
+        let finaldate = dateFormatterPrint.string(from: yourDate! as Date);
+        print(finaldate)
+      
+        return finaldate
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrip/get/8")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { [self] (data, response, error) in
+             // This will run when the network request returns
+             if let error = error {
+                    print(error.localizedDescription)
+             } else if let data = data {
+                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+
+                   
+                 
+                 
+                 titleLabel.text = dataDictionary["name"] as? String
+                 
+                 let date1 = parseDate2(date: dataDictionary["start_on"] as! String)as! String
+                 let date2 = parseDate2(date: dataDictionary["end_on"] as! String)as! String
+                 
+                 timeLabel.text = date1+" - "+date2
+                 
+                 
+                 
+                
+             
+                 
+                    print(dataDictionary)
+                 
+             }
+            
+            
+                  
+        }
+        task.resume()
+        
+        
+        
+       
         
         tab.selectedItem = tab.items?[0]
         itineraryView.isHidden = false

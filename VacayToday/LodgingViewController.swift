@@ -68,10 +68,10 @@ class LodgingViewController: UIViewController, UITableViewDataSource,UITableView
         let lodging = lodgings[indexPath.row]
         
         let title = lodging["act_title"] as! String
-        let location = lodging["location_name"] as! String
+        let location = lodging["location_name"] as? String
         let dateLabel = parseDate(date:lodging["act_from"] as! String) as! String
-
-        print(title+location+dateLabel)
+       
+        
 
 
         cell.titleLabel.text = title
