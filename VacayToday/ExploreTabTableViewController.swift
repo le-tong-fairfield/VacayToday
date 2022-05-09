@@ -17,6 +17,7 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
     var trips = [[String:Any]]()
     var modelController: ModelController!
     var dateFor: DateFormatter!
+    let myRefreshControl = UIRefreshControl(); // add refresh loader on top of page
     
 
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
         tableView.rowHeight = 210
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // add loader in the current controller, action on func loadTweets()
+        self.myRefreshControl.addTarget(self, action: #selector(getExplore), for: .valueChanged)
+        tableView.refreshControl = self.myRefreshControl;
         
         dateFor = DateFormatter()
         dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
@@ -53,6 +58,28 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    @objc func getExplore() {
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/explores/get")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { [self] (data, response, error) in
+             // This will run when the network request returns
+             if let error = error {
+                    print(error.localizedDescription)
+             } else if let data = data {
+                 
+                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
+
+                 self.trips = dataDictionary
+                    self.tableView.reloadData()
+                 // hide loading spinner
+                             self.myRefreshControl.endRefreshing();
+                 
+             }
+        }
+        task.resume()
+        }
 
     // MARK: - Table view data source
 
