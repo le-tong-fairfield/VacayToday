@@ -35,7 +35,13 @@ class LodgingDetailsViewController: UIViewController {
 
         titleLabel.text = lodging["act_title"] as? String
         addressLabel.text = lodging["location_address"] as? String
+        if addressLabel.text == nil {
+            addressLabel.text = "Please input lodging address"
+        }
         phoneNumberLabel.text = lodging["location_contact"] as? String
+        if phoneNumberLabel.text == nil {
+            phoneNumberLabel.text = "Please input lodging contact"
+        }
         checkInTimeLabel.text = parseDate2(date:lodging["act_from"] as! String) as! String
         checkOutTimeLabel.text = parseDate2(date:lodging["act_to"] as! String) as! String
         linkLabel.text = lodging["thumb_url"] as? String
