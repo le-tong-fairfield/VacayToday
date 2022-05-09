@@ -13,17 +13,23 @@ class CreateActivityViewController: UIViewController {
     @IBOutlet var expenseField: UITextField!
     @IBOutlet var reservationControl: UISegmentedControl!
     @IBOutlet var addressField: UITextField!
-    @IBOutlet var timeEndField: UITextField!
-    @IBOutlet var timeStartField: UITextField!
+    
+    @IBOutlet var timeStartPicker: UIDatePicker!
+    @IBOutlet var timeEndPicker: UIDatePicker!
+    
     @IBOutlet var restaurantField: UITextField!
     @IBOutlet var descriptionField: UITextField!
     @IBOutlet weak var titleLable: UILabel!
     
     var titleField = ""
+    var date1 = Date()
+    var date1String = ""
+    var date2 = Date()
+    var date2String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         titleLable.text = titleField
     }
     
@@ -43,7 +49,23 @@ class CreateActivityViewController: UIViewController {
         return reservation
     }
     
+    @IBAction func timeStartChange(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YY/MM/dd"
+        
+        date1String = dateFormatter.string(from:timeStartPicker.date)
+    }
+    
+    @IBAction func timeEndChange(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YY/MM/dd"
+        
+        date2String = dateFormatter.string(from:timeEndPicker.date)
+    }
+    //
     @IBAction func onCreate(_ sender: Any) {
+        
+      
         let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activity/create/8&1")!
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         request.httpMethod = "POST"
@@ -54,11 +76,11 @@ class CreateActivityViewController: UIViewController {
             "act_title":restaurantField.text!,
             "act_description":descriptionField.text!,
             "location_address":addressField.text!,
-            "expense":expenseField.text!,
+            "expense":Int(expenseField.text!)!,
             "recommendation":recommendationField.text!,
             "is_booked":translation(reservationControl),
-            "act_from":timeStartField.text!,
-            "act_to":timeEndField.text!,
+            "act_from": date1,
+            "act_to": date2
             
         ]
         do {
@@ -81,7 +103,7 @@ class CreateActivityViewController: UIViewController {
 //
 //                    self.tableView.reloadData()
 //
-                 
+                 print(date1String)
                  print(parameters)
              }
         }
