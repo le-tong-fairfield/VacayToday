@@ -247,6 +247,9 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             let detailsViewController = segue.destination as! TransportationDetailsViewController
             detailsViewController.transportation = act
             break;
+        case "addActSegue":
+            let catViewController = segue.destination as! CategoryViewController
+            catViewController.modelController = modelController
         default:
             break;
         }

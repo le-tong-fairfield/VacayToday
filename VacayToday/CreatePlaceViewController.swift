@@ -28,10 +28,10 @@ class CreatePlaceViewController: UIViewController {
     var date1String = ""
     var date2 = Date()
     var date2String = ""
+    var modelController: ModelController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, YYYY hh:mm:ss"
         

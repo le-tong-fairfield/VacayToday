@@ -828,7 +828,6 @@
                                     <color key="baseBackgroundColor" red="0.52156862749999999" green="0.86666666670000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onFood:" destination="dZK-fO-ZGe" eventType="touchUpInside" id="RIZ-pf-nEE"/>
                                     <segue destination="NvP-ON-HMN" kind="presentation" identifier="createActivitySegue" id="hPW-S9-4d9"/>
                                 </connections>
                             </button>
@@ -855,7 +854,6 @@
                                     <color key="baseBackgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onLodging:" destination="dZK-fO-ZGe" eventType="touchUpInside" id="7Ai-1I-U2Z"/>
                                     <segue destination="28V-3K-XbF" kind="presentation" id="dLX-eH-nZR"/>
                                 </connections>
                             </button>

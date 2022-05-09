@@ -10,7 +10,7 @@ import UIKit
 class CategoryViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
-    
+    var modelController: ModelController!
     
     
     override func viewDidLoad() {
@@ -19,34 +19,18 @@ class CategoryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           // Get a reference to the second view controller
+        if let vc = segue.destination as? CreateLodgingViewController {
+            vc.modelController = modelController
+        } else if let vc = segue.destination as? CreateTransportationViewController {
+            vc.modelController = modelController
+        } else if let vc = segue.destination as? CreatePlaceViewController {
+            vc.modelController = modelController
+        } else if let vc = segue.destination as? CreateActivityViewController {
+            vc.modelController = modelController
+        }
 
-    @IBAction func onFood(_ sender: Any) {
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-               // Get a reference to the second view controller
-               let CreateActivityViewController = segue.destination as! CreateActivityViewController
-           
-               
-
-               // Set a variable in the second view controller with the String to pass
-            
-            
-           }
     }
-    
-    @IBAction func onLodging(_ sender: Any) {
-        
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-               // Get a reference to the second view controller
-               let CreateLodgingViewController = segue.destination as! CreateLodgingViewController
-           
-               
 
-               // Set a variable in the second view controller with the String to pass
-              
-//
-           }
-    }
-    
 }

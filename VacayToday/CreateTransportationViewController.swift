@@ -32,12 +32,12 @@ class CreateTransportationViewController: UIViewController {
     var date1String = ""
     var date2 = Date()
     var date2String = ""
+    var modelController: ModelController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, YYYY hh:mm:ss"
-        
         date1String = dateFormatter.string(from:timeStartPicker.date)
         date2String = dateFormatter.string(from:timeEndPicker.date)
         // Do any additional setup after loading the view.

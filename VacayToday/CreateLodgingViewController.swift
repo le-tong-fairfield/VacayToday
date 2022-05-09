@@ -24,7 +24,7 @@ class CreateLodgingViewController: UIViewController {
     var date1String = ""
     var date2 = Date()
     var date2String = ""
-    
+    var modelController: ModelController!
     
     
     
@@ -36,7 +36,6 @@ class CreateLodgingViewController: UIViewController {
         
         date1String = dateFormatter.string(from:timeStartPicker.date)
         date2String = dateFormatter.string(from:timeEndPicker.date)
-        
     }
     
    
@@ -66,7 +65,7 @@ class CreateLodgingViewController: UIViewController {
         
         
       
-        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activity/create/8&3")!
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activity/create/\(modelController.trip.tripId)&3")!
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         request.httpMethod = "POST"
         // add headers for the request
