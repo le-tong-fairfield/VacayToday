@@ -79,14 +79,37 @@ class TransportationViewController: UIViewController, UITableViewDataSource,UITa
             
         let transportation = transportations[indexPath.row]
         
+        
+//        if transportation["expense"]  == NSNull{
+//            let costLabel = "0"
+//        }else{
+//            let costLabel = transportation["expense"] as! String
+//        }
+        
+     
+        
         let dateToLabel = parseDate2(date:transportation["act_to"] as! String) as! String
-        let locationToLabel = transportation["location_name"] as! String
+        let locationToLabel = transportation["location_address"] as! String
         let dateFromLabel = parseDate2(date:transportation["act_from"] as! String) as! String
-        let locationFromLabel = transportation["location_name"] as! String
+        let locationFromLabel = transportation["location_address"] as! String
         let dateLabel = parseDate(date:transportation["act_from"] as! String) as! String
-        let modeLabel = transportation["trans_mode"] as! String as! String
+        let modeLabel = transportation["trans_mode"] as? String
+        let costLabel = transportation["expense"] ?? 0
         
         
+        
+        
+    
+        print(transportation["expense"])
+        
+        let cost = transportation["expense"] ?? 0
+        print(cost)
+        
+        if cost is NSNull{
+            cell.costLabel.text = "0"
+        }else{
+            cell.costLabel.text = String((costLabel as? Int)!)
+        }
         
         cell.dateToLabel.text = dateToLabel
         cell.dateFromLabel.text = dateFromLabel
@@ -94,6 +117,8 @@ class TransportationViewController: UIViewController, UITableViewDataSource,UITa
         cell.locationFromLabel.text = locationFromLabel
         cell.dateLabel.text = dateLabel
         cell.modeLabel.text = modeLabel
+//        cell.costLabel.text = costLabel as! String
+        
         
      
 

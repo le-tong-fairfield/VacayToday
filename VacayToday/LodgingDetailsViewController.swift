@@ -15,6 +15,7 @@ class LodgingDetailsViewController: UIViewController {
     @IBOutlet weak var checkInTimeLabel: UILabel!
     @IBOutlet weak var checkOutTimeLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
+    @IBOutlet var costLabel: UILabel!
     
     var lodging: [String:Any]!
     
@@ -39,7 +40,21 @@ class LodgingDetailsViewController: UIViewController {
         checkInTimeLabel.text = parseDate2(date:lodging["act_from"] as! String) as! String
         checkOutTimeLabel.text = parseDate2(date:lodging["act_to"] as! String) as! String
         linkLabel.text = lodging["thumb_url"] as? String
-
+//        costLabel.text = String((lodging["expense"] as? Int)!)
+        
+        
+       
+    
+        print(lodging["expense"])
+        
+        let cost = lodging["expense"] ?? 0
+        print(cost)
+        
+        if cost is NSNull{
+            costLabel.text = "0"
+        }else{
+            costLabel.text = String((lodging["expense"] as? Int)!)
+        }
 
     }
     
