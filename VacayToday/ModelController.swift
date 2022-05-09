@@ -14,8 +14,7 @@ struct User: Codable {
 
 struct Trip {
     var tripId: Int
-    var activityId: Int
-    var categoryId: Int
+    var fromExplore: Bool
 }
 
 class ModelController {
@@ -25,7 +24,6 @@ class ModelController {
     )
     var trip = Trip(
         tripId: 0,
-        activityId: 0,
-        categoryId: 0
+        fromExplore: false
     )
 }

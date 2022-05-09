@@ -41,7 +41,6 @@ class TripViewController: UIViewController, UITabBarDelegate {
         let dateFormatterPrint = DateFormatter();
         dateFormatterPrint.dateFormat = "MMMM dd, YYYY"
         let finaldate = dateFormatterPrint.string(from: yourDate! as Date);
-        print(finaldate)
       
         return finaldate
     }
@@ -72,10 +71,6 @@ class TripViewController: UIViewController, UITabBarDelegate {
                   
         }
         task.resume()
-        
-        
-        
-       
         
         tab.selectedItem = tab.items?[0]
         itineraryView.isHidden = false
@@ -172,7 +167,6 @@ class TripViewController: UIViewController, UITabBarDelegate {
             let vc = dest.topViewController as! TransportationViewController
             self.embeddedTransport = vc
             vc.modelController = modelController
-            print("oneee")
         }
     }
     

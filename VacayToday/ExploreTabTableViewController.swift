@@ -100,14 +100,14 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
         return cell
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? TripViewController {
+            let cell = sender as! UITableViewCell;
+            let indexPath = tableView.indexPath(for: cell)!;
+            let trip = trips[indexPath.row];
+            modelController.trip.tripId = trip["trip_id"]! as! Int
+            modelController.trip.fromExplore = true
+            vc.modelController = modelController;
+        }
     }
-    */
-
 }

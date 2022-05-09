@@ -28,7 +28,8 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var dateText: UITextField!
     
-        override func viewDidLoad() {
+    @IBOutlet weak var addBtn: UIButton!
+    override func viewDidLoad() {
             super.viewDidLoad()
             createPickerView()
             dismissPickerView()
@@ -45,7 +46,12 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             timeFormatterPrint.amSymbol = "AM"
             timeFormatterPrint.pmSymbol = "PM"
             dateForPrint.dateFormat = "yyyy-MM-dd"
-            print("twooo")
+            
+            if (modelController.trip.fromExplore) {
+                dateText.isHidden = true
+                addBtn.isHidden = true
+            }
+            
             getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/get/\(modelController.trip.tripId)", isGettingActs: true)
             getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/getdates/\(modelController.trip.tripId)", isGettingActs: false)
             

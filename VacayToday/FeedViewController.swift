@@ -81,6 +81,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             let indexPath = collectionView.indexPath(for: cell)!;
             let trip = trips[indexPath.row];
             modelController.trip.tripId = trip["trip_id"]! as! Int
+            modelController.trip.fromExplore = false
             vc.modelController = modelController;
         }
     }

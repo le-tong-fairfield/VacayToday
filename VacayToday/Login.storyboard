@@ -774,6 +774,7 @@
                                     <outlet property="explorePeopleLabel" destination="kR7-Ga-5Zh" id="Mk6-is-wOK"/>
                                     <outlet property="exploreTitleLabel" destination="4Mf-av-rhn" id="yx6-w1-lwN"/>
                                     <outlet property="likeNumberLabel" destination="GK3-Mn-MaJ" id="sDt-TN-sUA"/>
+                                    <segue destination="Nw1-ep-zEL" kind="presentation" id="4m8-MC-k9m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2269,6 +2270,7 @@
                     <navigationItem key="navigationItem" id="Osm-6t-eIT"/>
                     <connections>
                         <outlet property="actTableView" destination="8B4-o9-B4y" id="saZ-hD-XRX"/>
+                        <outlet property="addBtn" destination="x0B-xc-CA1" id="pcc-3p-oio"/>
                         <outlet property="dateText" destination="MVg-LZ-ha9" id="bJN-PP-SK2"/>
                         <segue destination="BC9-ea-8V5" kind="presentation" identifier="placeDetailSegue" id="9J4-eU-EI9"/>
                         <segue destination="Or1-Kx-nsv" kind="presentation" identifier="foodDetailSegue" id="fhk-tO-egI"/>
@@ -2609,7 +2611,8 @@
         <segue reference="7Bq-x6-FEP"/>
         <segue reference="9J4-eU-EI9"/>
         <segue reference="Udc-45-v3D"/>
-        <segue reference="svp-Ks-G1K"/>
+        <segue reference="MVR-Ax-59f"/>
+        <segue reference="4m8-MC-k9m"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="airplane" catalog="system" width="128" height="115"/>
