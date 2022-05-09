@@ -76,6 +76,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         } else if let vc = segue.destination as? ManageTripViewController {
             vc.modelController = modelController;
             vc.vcFromFeed = self
+        } else if let vc = segue.destination as? TripViewController {
+            let cell = sender as! UICollectionViewCell;
+            let indexPath = collectionView.indexPath(for: cell)!;
+            let trip = trips[indexPath.row];
+            modelController.trip.tripId = trip["trip_id"]! as! Int
+            vc.modelController = modelController;
         }
     }
 

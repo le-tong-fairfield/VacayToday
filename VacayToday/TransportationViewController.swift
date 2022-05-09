@@ -12,6 +12,7 @@ class TransportationViewController: UIViewController, UITableViewDataSource,UITa
     @IBOutlet weak var tableView: UITableView!
     
     var transportations = [[String:Any]]();
+    var modelController: ModelController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class TransportationViewController: UIViewController, UITableViewDataSource,UITa
         tableView.delegate = self
         
         print("transportation")
-        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activities/get/8&4")!
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activities/get/\(modelController.trip.tripId)&4")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { [self] (data, response, error) in
@@ -32,14 +33,8 @@ class TransportationViewController: UIViewController, UITableViewDataSource,UITa
                     print(error.localizedDescription)
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
-
                     self.transportations = dataDictionary as! [[String : Any]];
-                
-
                     self.tableView.reloadData()
-
-                    print(dataDictionary)
-
              }
                   
         }

@@ -10,7 +10,7 @@
 import UIKit
 
 class ItineraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
-    
+    var modelController: ModelController!
 
     // An array of dictionaries exists throughout the life time of the screen
     var acts = [[String:Any]]();
@@ -45,9 +45,9 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             timeFormatterPrint.amSymbol = "AM"
             timeFormatterPrint.pmSymbol = "PM"
             dateForPrint.dateFormat = "yyyy-MM-dd"
-            
-            getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/get/8", isGettingActs: true)
-            getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/getdates/8", isGettingActs: false)
+            print("twooo")
+            getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/get/\(modelController.trip.tripId)", isGettingActs: true)
+            getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/getdates/\(modelController.trip.tripId)", isGettingActs: false)
             
         }
     
@@ -68,6 +68,7 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
                  } else {
                      let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String]
                      self.dateList = dataDictionary
+                     self.dateText.isEnabled = self.dateList.count == 0
                  }
              }
         }
@@ -141,7 +142,6 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             
             
             let cost = act["expense"] ?? 0
-            print(cost)
             
             if cost is NSNull{
                 cell.expense.text = "0"
@@ -213,7 +213,7 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
     @objc func action() {
           view.endEditing(true)
         let encoded = selectedDate!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        let end =  "https://vacaytoday.herokuapp.com/api/trip/activities/getbydate/8&\(encoded)"
+        let end =  "https://vacaytoday.herokuapp.com/api/trip/activities/getbydate/\(modelController.trip.tripId)&\(encoded)"
         getAPI(endpoint: end, isGettingActs: true)
     }
     

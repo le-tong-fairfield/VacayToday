@@ -16,6 +16,9 @@ class TripViewController: UIViewController, UITabBarDelegate {
     
   
     
+    @IBAction func onBack(_ sender: Any) {
+        self.dismiss(animated: true);
+    }
     
     @IBOutlet weak var tab: UITabBar!
     
@@ -30,6 +33,7 @@ class TripViewController: UIViewController, UITabBarDelegate {
     private var embeddedFood : FoodViewController!;
     private var embeddedLodging : LodgingViewController!;
     private var embeddedTransport : TransportationViewController!;
+    var modelController: ModelController!
     
     func parseDate2(date:String)->String{
         let dateFor: DateFormatter = DateFormatter(); dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
@@ -44,8 +48,7 @@ class TripViewController: UIViewController, UITabBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrip/get/8")!
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrip/get/\(modelController.trip.tripId)")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { [self] (data, response, error) in
@@ -55,22 +58,13 @@ class TripViewController: UIViewController, UITabBarDelegate {
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 
-                   
-                 
-                 
                  titleLabel.text = dataDictionary["name"] as? String
                  
-                 let date1 = parseDate2(date: dataDictionary["start_on"] as! String)as! String
-                 let date2 = parseDate2(date: dataDictionary["end_on"] as! String)as! String
-                 
-                 timeLabel.text = date1+" - "+date2
-                 
-                 
-                 
-                
-             
-                 
-                    print(dataDictionary)
+                 if let startDate = dataDictionary["start_on"] as? String, let endDate = dataDictionary["end_on"] as? String {
+                     let date1 = parseDate2(date: startDate) as! String
+                     let date2 = parseDate2(date: endDate) as! String
+                     timeLabel.text = date1+" - "+date2
+                 }
                  
              }
             
@@ -153,26 +147,32 @@ class TripViewController: UIViewController, UITabBarDelegate {
         if segue.identifier == "itinerarySegue" {
             let vc = dest.topViewController as! ItineraryViewController
             self.embeddedItinerary = vc
+            vc.modelController = modelController
         }
         
         if segue.identifier == "placesSegue" {
             let vc = dest.topViewController as! PlacesViewController
             self.embeddedPlaces = vc
+            vc.modelController = modelController
         }
         
         if segue.identifier == "foodSegue" {
             let vc = dest.topViewController as! FoodViewController
             self.embeddedFood = vc
+            vc.modelController = modelController
         }
         
         if segue.identifier == "lodgingSegue" {
             let vc = dest.topViewController as! LodgingViewController
             self.embeddedLodging = vc
+            vc.modelController = modelController
         }
         
         if segue.identifier == "transportSegue" {
             let vc = dest.topViewController as! TransportationViewController
             self.embeddedTransport = vc
+            vc.modelController = modelController
+            print("oneee")
         }
     }
     
