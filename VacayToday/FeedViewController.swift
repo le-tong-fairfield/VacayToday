@@ -23,6 +23,15 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        getMyTrips()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getMyTrips()
+    }
+    
+    func getMyTrips() {
         let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrips/get/1")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -35,24 +44,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
 
                     self.trips = dataDictionary as![[String:Any]]
-//
-//
                     self.collectionView.reloadData()
-
-                    print(dataDictionary)
-
-                    // TODO: Get the array of movies
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
-                 print(data)
              }
         }
         task.resume()
-
-        print("logged\(modelController.user)")
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,6 +73,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? EditTripViewController {
             vc.modelController = modelController;
+            vc.vc = self
         } else if let vc = segue.destination as? ManageTripViewController {
             vc.modelController = modelController;
         }

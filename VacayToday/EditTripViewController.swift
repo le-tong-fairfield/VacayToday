@@ -14,7 +14,7 @@ class EditTripViewController: UIViewController {
     @IBOutlet weak var numPeopleField: UITextField!
     @IBOutlet weak var tripIntroField: UITextView!
     
-    
+    var vc: FeedViewController!
     var modelController: ModelController!
     var isPublishing: Bool!
     var tripId: Int!
@@ -29,6 +29,10 @@ class EditTripViewController: UIViewController {
         } else {
             submitBtn.title = "Save"
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        vc.getMyTrips()
     }
     
     func createTripAPI() {
