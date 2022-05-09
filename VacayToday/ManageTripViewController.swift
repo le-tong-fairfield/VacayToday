@@ -18,6 +18,11 @@ class ManageTripViewController: UIViewController {
     
     var modelController: ModelController!
     
+    override func viewWillDisappear(_ animated: Bool) {
+        modelController.trip.tripId = 0
+    }
+    
+    
     @IBAction func doneButton(_ sender: Any) {
         let userInput = usersAdded.text!
         let separator = CharacterSet(charactersIn: ",")
@@ -35,8 +40,6 @@ class ManageTripViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

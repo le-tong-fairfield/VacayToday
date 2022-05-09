@@ -8,14 +8,14 @@
 import Foundation
 
 struct User: Codable {
-    let userId: Int
-    let username: String
+    var userId: Int
+    var username: String
 }
 
 struct Trip {
-    let tripId: Int
-    let activityId: Int
-    let categoryId: Int
+    var tripId: Int
+    var activityId: Int
+    var categoryId: Int
 }
 
 class ModelController {

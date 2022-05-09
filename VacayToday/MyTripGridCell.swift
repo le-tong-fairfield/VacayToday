@@ -14,5 +14,10 @@ class MyTripGridCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    var onEditAction: ((Any) -> Void)?
+    
+    @IBAction func onEditTrip(_ sender: Any) {
+        self.onEditAction?(sender)
+    }
     
 }

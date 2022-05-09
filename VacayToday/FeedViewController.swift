@@ -16,6 +16,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     var modelController: ModelController!
     
     var trips = [[String:Any]]()
+    var onEditAction: ((Any) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,6 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.dataSource = self
         
         getMyTrips()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,10 +61,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let trip = trips[indexPath.item]
         let title = trip["name"]
+        let tripId = trip["trip_id"]
 //        let tripID = trip["trip_id"]
 //        let image = trip["profile_image"]
         
-        
+        cell.onEditAction = { sender in
+            self.modelController.trip.tripId = tripId as! Int
+            self.performSegue(withIdentifier: "editSegue", sender: nil)
+        }
         cell.titleLabel.text = title as! String
 
         return cell

@@ -33,6 +33,7 @@ class EditTripViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         vc.getMyTrips()
+        modelController.trip.tripId = 0
     }
     
     func createTripAPI() {
@@ -72,6 +73,7 @@ class EditTripViewController: UIViewController {
         }
         task.resume()
     }
+    
     
     @IBAction func onSubmit(_ sender: Any) {
         if(tripId == 0) {
