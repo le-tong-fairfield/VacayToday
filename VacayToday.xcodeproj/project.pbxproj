@@ -17,6 +17,7 @@
 		4F56783D280E2FD400E98764 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 4F56783C280E2FD400E98764 /* Poppins */; };
 		4FA1F449281493870061A831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F448281493860061A831 /* ContentView.swift */; };
 		70CE3E812822F40100D216C0 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CE3E802822F40100D216C0 /* ModelController.swift */; };
+		70DE2AF72828915500D62F37 /* EditTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE2AF62828915500D62F37 /* EditTripViewController.swift */; };
 		F90128B52814C09C009C0CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90128B32814C09C009C0CB4 /* Main.storyboard */; };
 		F92A9E812817616800443050 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E802817616800443050 /* FeedViewController.swift */; };
 		F92A9E83281761B000443050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A9E82281761B000443050 /* LoginViewController.swift */; };
@@ -40,6 +41,7 @@
 		4F56783C280E2FD400E98764 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		4FA1F448281493860061A831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70CE3E802822F40100D216C0 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		70DE2AF62828915500D62F37 /* EditTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripViewController.swift; sourceTree = "<group>"; };
 		F90128B42814C09C009C0CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F92A9E802817616800443050 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F92A9E82281761B000443050 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				F92E75D628276306007BEB43 /* ExploreTabTableViewController.swift */,
 				F92E75D828276348007BEB43 /* ExploreTabTableViewCell.swift */,
 				F9E9F3CA2814B1F800404B32 /* Login.storyboard */,
+				70DE2AF62828915500D62F37 /* EditTripViewController.swift */,
 				70CE3E802822F40100D216C0 /* ModelController.swift */,
 				F90128B32814C09C009C0CB4 /* Main.storyboard */,
 				4F56782D280E1A3600E98764 /* Assets.xcassets */,
@@ -190,6 +193,7 @@
 				4F567829280E1A3400E98764 /* ViewController.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
 				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
+				70DE2AF72828915500D62F37 /* EditTripViewController.swift in Sources */,
 				F92E75D928276348007BEB43 /* ExploreTabTableViewCell.swift in Sources */,
 				F9EDE81428234A0E00318A13 /* MyTripGridCell.swift in Sources */,
 				F92A9E812817616800443050 /* FeedViewController.swift in Sources */,

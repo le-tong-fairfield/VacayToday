@@ -9,6 +9,9 @@ import UIKit
 
 class ManageTripViewController: UIViewController {
 
+    @IBAction func onBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var tripLabel: UILabel!
     
     @IBOutlet weak var usersAdded: UITextField!
@@ -32,6 +35,10 @@ class ManageTripViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
 
