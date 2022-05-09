@@ -16,18 +16,19 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
     
     var trips = [[String:Any]]()
     var modelController: ModelController!
+    var dateFor: DateFormatter!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 210
-        print(modelController)
-
-        
         tableView.dataSource = self
         tableView.delegate = self
         
-        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrips/get/1")!
+        dateFor = DateFormatter()
+        dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/explores/get")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { [self] (data, response, error) in
@@ -75,62 +76,29 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
         let peopleInt = trip["num_people"] as! Int
         let people = String(peopleInt)
         
+        var numDays = 0
+        
+        if let startStr = trip["start_on"] as? String, let endStr = trip["end_on"] as? String {
+            let startDate: NSDate? = dateFor.date(from: startStr) as NSDate?
+            let endDate: NSDate? = dateFor.date(from: endStr) as NSDate?
+
+            let calendar = NSCalendar.current
+            // Set time to 00:00
+            let date1 = calendar.startOfDay(for: startDate! as Date)
+            let date2 = calendar.startOfDay(for: endDate! as Date)
+
+            // Subtract the two dates
+            let components = calendar.dateComponents([.day, .month, .year, .hour], from: date1, to: date2)
+            numDays = components.day!
+        }
+        
+        cell.exploreDaysLabel.text = String(numDays) + " days"
         cell.exploreTitleLabel.text = title as? String
         cell.likeNumberLabel.text = likes
         cell.explorePeopleLabel.text = people + " people"
         
-        
-        return cell
-        
-    
-        
-        
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
