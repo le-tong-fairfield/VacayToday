@@ -77,7 +77,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? EditTripViewController {
             vc.modelController = modelController;
-            vc.vc = self
+            vc.vcFromFeed = self
         } else if let vc = segue.destination as? ManageTripViewController {
             vc.modelController = modelController;
         }
