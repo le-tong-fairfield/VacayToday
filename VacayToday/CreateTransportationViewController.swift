@@ -109,16 +109,8 @@ class CreateTransportationViewController: UIViewController {
              // This will run when the network request returns
              if let error = error {
                     print(error.localizedDescription)
-             } else if let data = data {
-                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-//
-//                    self.movies = dataDictionary["results"] as![[String:Any]]
-//
-//
-//                    self.tableView.reloadData()
-//
-                 print(date1String)
-                 print(parameters)
+             } else if let _ = data {
+                 self.dismiss(animated: true, completion: nil)
              }
         }
             
@@ -158,16 +150,8 @@ class CreateTransportationViewController: UIViewController {
              // This will run when the network request returns
              if let error = error {
                     print(error.localizedDescription)
-             } else if let data = data {
-                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-//
-//                    self.movies = dataDictionary["results"] as![[String:Any]]
-//
-//
-//                    self.tableView.reloadData()
-//
-                 print(date1String)
-                 print(parameters)
+             } else if let _ = data {
+                 self.dismiss(animated: true, completion: nil)
              }
         }
             
