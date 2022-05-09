@@ -12,6 +12,7 @@ class FoodViewController: UIViewController, UITableViewDataSource,UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     var foods = [[String:Any]]();
     var modelController: ModelController!
+    let myRefreshControl = UIRefreshControl(); // add refresh loader on top of page
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ class FoodViewController: UIViewController, UITableViewDataSource,UITableViewDel
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // add loader in the current controller, action on func loadTweets()
+                self.myRefreshControl.addTarget(self, action: #selector(reloadAPI), for: .valueChanged)
+                tableView.refreshControl = self.myRefreshControl;
         
         print("foods")
         let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activities/get/\(modelController.trip.tripId)&2")!
@@ -39,6 +44,25 @@ class FoodViewController: UIViewController, UITableViewDataSource,UITableViewDel
         }
         task.resume()
         
+    }
+    
+    @objc func reloadAPI() {
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/activities/get/\(modelController.trip.tripId)&2")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { [self] (data, response, error) in
+             // This will run when the network request returns
+             if let error = error {
+                    print(error.localizedDescription)
+             } else if let data = data {
+                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
+                    self.foods = dataDictionary as! [[String : Any]];
+                    self.tableView.reloadData()
+                 self.myRefreshControl.endRefreshing();
+             }
+                  
+        }
+        task.resume()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
