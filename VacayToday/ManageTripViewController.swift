@@ -22,6 +22,7 @@ class ManageTripViewController: UIViewController {
     var isPublished: Bool!
     var unpublishTitleColor: UIColor!
     var publishTitleColor: UIColor!
+    var vcFromFeed: FeedViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class ManageTripViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         modelController.trip.tripId = 0
+        vcFromFeed.getMyTrips()
     }
     
     func updateTripAPI(parameters: [String: Any]) {

@@ -51,25 +51,16 @@ class LoginViewController: UIViewController {
                     print(error.localizedDescription)
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-//
-//                    self.movies = dataDictionary["results"] as![[String:Any]]
-//
-//
-//                    self.tableView.reloadData()
-//
                  if dataDictionary["statusCode"] as! Int == 200 {
                      let userId = dataDictionary["user_id"] as! Int
                      let username = dataDictionary["username"] as! String
                      modelController.user = User(userId: userId, username: username)
-                     
                      let encoder = JSONEncoder()
                      if let encodedUser = try? encoder.encode(modelController.user) {
                          defaults.set(encodedUser, forKey: "user")
+                         performSegue(withIdentifier: "loginSegue", sender: nil)
                      }
-                     performSegue(withIdentifier: "loginSegue", sender: nil)
                  }
-                 
-                 print(dataDictionary)
              }
         }
         task.resume()
@@ -79,10 +70,8 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // To access the child view of UINavigationController, we need this intermediate line
-        if let tab = segue.destination as? UITabBarController {
-            let nav = tab.viewControllers?[0] as! UINavigationController
-            let feedViewController = nav.topViewController as! FeedViewController
-            feedViewController.modelController = modelController;
+        if let tab = segue.destination as? TabBarController {
+            tab.setModelController(mc: modelController)
         }
     }
 

@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="loginviewcontroller" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginviewcontroller" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onLogIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kpg-4v-Qen"/>
-                                    <segue destination="qcx-CL-PNM" kind="presentation" identifier="loginSegue" id="9QZ-mc-cLJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrm-bB-Lx2">
@@ -106,6 +105,7 @@
                     <connections>
                         <outlet property="passwordField" destination="sxD-dt-Ezk" id="hmy-mB-9JF"/>
                         <outlet property="usernameField" destination="70y-2X-0nh" id="dLM-Cn-6Jy"/>
+                        <segue destination="qcx-CL-PNM" kind="presentation" identifier="loginSegue" id="b7W-Hv-RLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -170,7 +170,6 @@
                                 <connections>
                                     <action selector="onLogIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PWo-OT-l3u"/>
                                     <action selector="onSignUp:" destination="E2r-N4-f6W" eventType="touchUpInside" id="4hk-un-Bv8"/>
-                                    <segue destination="qcx-CL-PNM" kind="presentation" identifier="signupSegue" id="8b8-8u-QCt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,6 +198,7 @@
                     <connections>
                         <outlet property="setPasswordField" destination="y01-9c-B9X" id="l3v-7M-762"/>
                         <outlet property="setUsernameField" destination="krP-gS-GWk" id="xis-uv-LX4"/>
+                        <segue destination="qcx-CL-PNM" kind="presentation" identifier="signupSegue" id="Udc-45-v3D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E2-fy-ZKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -493,7 +493,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3Cv-L4-ZoO">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" id="qcx-CL-PNM" customClass="TabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" id="qcx-CL-PNM" customClass="TabBarController" customModule="VacayToday" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4kI-qd-mzL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -551,8 +551,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3z-RY-L0U">
-                                <rect key="frame" x="148" y="279" width="118.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3z-RY-L0U">
+                                <rect key="frame" x="20" y="279" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -561,7 +561,8 @@
                         <viewLayoutGuide key="safeArea" id="uw1-RA-5x2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="m3z-RY-L0U" firstAttribute="leading" secondItem="uw1-RA-5x2" secondAttribute="leading" constant="148" id="ker-Cn-56r"/>
+                            <constraint firstItem="uw1-RA-5x2" firstAttribute="trailing" secondItem="m3z-RY-L0U" secondAttribute="trailing" constant="20" id="65o-ub-w4T"/>
+                            <constraint firstItem="m3z-RY-L0U" firstAttribute="leading" secondItem="uw1-RA-5x2" secondAttribute="leading" constant="20" id="ker-Cn-56r"/>
                             <constraint firstItem="m3z-RY-L0U" firstAttribute="top" secondItem="uw1-RA-5x2" secondAttribute="top" constant="191" id="mVM-So-Ybm"/>
                         </constraints>
                     </view>
@@ -569,7 +570,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="UL9-Gi-EJf">
                             <color key="tintColor" red="0.80000000000000004" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="onLogOut:" destination="de3-z2-SPW" id="2l1-dD-dfk"/>
+                                <segue destination="Y6W-OH-hqX" kind="presentation" identifier="logoutSegue" id="44D-OQ-NLs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -706,7 +707,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9QZ-mc-cLJ"/>
+        <segue reference="Udc-45-v3D"/>
         <segue reference="svp-Ks-G1K"/>
     </inferredMetricsTieBreakers>
     <resources>

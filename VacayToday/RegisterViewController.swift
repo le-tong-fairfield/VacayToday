@@ -46,12 +46,6 @@ class RegisterViewController: UIViewController {
                     print(error.localizedDescription)
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-//
-//                    self.movies = dataDictionary["results"] as![[String:Any]]
-//
-//
-//                    self.tableView.reloadData()
-//
                  if dataDictionary["statusCode"] as! Int == 200 {
                      let userId = dataDictionary["user_id"] as! Int
                      let username = dataDictionary["username"] as! String
@@ -71,10 +65,9 @@ class RegisterViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // To access the child view of UINavigationController, we need this intermediate line
-        let tab = segue.destination as! UITabBarController
-        let nav = tab.viewControllers?[0] as! UINavigationController
-        let feedViewController = nav.topViewController as! FeedViewController
-        feedViewController.modelController = modelController;
+        if let tab = segue.destination as? TabBarController {
+            tab.setModelController(mc: modelController)
+        }
     }
     
 }

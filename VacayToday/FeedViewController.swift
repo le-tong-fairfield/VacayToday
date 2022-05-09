@@ -5,11 +5,11 @@
 //  Created by Parker Fairfield on 4/25/22.
 //
 
+// TODO: Willappear instead of viewDidLoad in order to reload
+
 import UIKit
 
 class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,19 +20,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        getMyTrips()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        print(modelController.user)
         getMyTrips()
     }
     
     func getMyTrips() {
-        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrips/get/1")!
+        let url = URL(string: "https://vacaytoday.herokuapp.com/api/trip/mytrips/get/\(modelController.user.userId)")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { [self] (data, response, error) in
@@ -80,6 +75,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             vc.vcFromFeed = self
         } else if let vc = segue.destination as? ManageTripViewController {
             vc.modelController = modelController;
+            vc.vcFromFeed = self
         }
     }
 

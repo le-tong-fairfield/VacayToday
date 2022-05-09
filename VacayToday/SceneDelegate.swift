@@ -24,17 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 // Look for file named Login.storyboard
                 let storyboard = UIStoryboard(name: "Login", bundle: nil)
                 // Creat a tab bar controller named TabBarController in storyboard
-                let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                // Set to root view
-                window?.rootViewController = tabBarController
-                // Get first tab item navigation controller
-                let nav = tabBarController.viewControllers?[0] as! UINavigationController
-                // Get the view controller from the navigation controller
-                let feedViewController = nav.topViewController as! FeedViewController
-                // Pass model controller to feed view controller
+                let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
                 let modelController = ModelController()
                 modelController.user = savedUser
-                feedViewController.modelController = modelController
+                tabBarController.setModelController(mc: modelController)
+                // Set to root view
+                window?.rootViewController = tabBarController
             }
         }
     }

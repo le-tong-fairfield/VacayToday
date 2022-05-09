@@ -15,12 +15,13 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
     
     
     var trips = [[String:Any]]()
+    var modelController: ModelController!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 210
-   
+        print(modelController)
 
         
         tableView.dataSource = self
@@ -38,15 +39,7 @@ class ExploreTabTableViewController: UIViewController,UITableViewDataSource,UITa
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
 
                  self.trips = dataDictionary
-//
-//
                     self.tableView.reloadData()
-
-                    print(dataDictionary)
-
-                    // TODO: Get the array of movies
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
                  
              }
         }
