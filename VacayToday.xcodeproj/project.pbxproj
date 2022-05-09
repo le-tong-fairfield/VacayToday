@@ -30,6 +30,8 @@
 		F957076F2824CDA1004F1A96 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */; };
 		F95707712824D215004F1A96 /* LodgingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95707702824D215004F1A96 /* LodgingTableViewCell.swift */; };
 		F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97580CD281F759400C1A929 /* RegisterViewController.swift */; };
+		F984292628288D9200EAB286 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984292528288D9200EAB286 /* CategoryViewController.swift */; };
+		F984292828288DAC00EAB286 /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984292728288DAC00EAB286 /* CreateActivityViewController.swift */; };
 		F9AD1C7628274554000BA308 /* TransportationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */; };
 		F9BCEE772824DB1D00BE59CC /* TransportationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */; };
 		F9C03F8D2826027700699590 /* PlacesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */; };
@@ -64,6 +66,8 @@
 		F957076E2824CDA1004F1A96 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F95707702824D215004F1A96 /* LodgingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodgingTableViewCell.swift; sourceTree = "<group>"; };
 		F97580CD281F759400C1A929 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F984292528288D9200EAB286 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F984292728288DAC00EAB286 /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
 		F9AD1C7528274554000BA308 /* TransportationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationDetailsViewController.swift; sourceTree = "<group>"; };
 		F9BCEE762824DB1D00BE59CC /* TransportationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationTableViewCell.swift; sourceTree = "<group>"; };
 		F9C03F8C2826027700699590 /* PlacesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				F92A9E802817616800443050 /* FeedViewController.swift */,
 				F92A9E82281761B000443050 /* LoginViewController.swift */,
 				F97580CD281F759400C1A929 /* RegisterViewController.swift */,
+				F984292528288D9200EAB286 /* CategoryViewController.swift */,
+				F984292728288DAC00EAB286 /* CreateActivityViewController.swift */,
 			);
 			path = VacayToday;
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 				4F567829280E1A3400E98764 /* ViewController.swift in Sources */,
 				70CE3E91282371C400D216C0 /* TransportationViewController.swift in Sources */,
 				70CE3E8B2823702500D216C0 /* PlacesViewController.swift in Sources */,
+				F984292828288DAC00EAB286 /* CreateActivityViewController.swift in Sources */,
+				F984292628288D9200EAB286 /* CategoryViewController.swift in Sources */,
 				70CE3E8D282370D000D216C0 /* LodgingViewController.swift in Sources */,
 				70E0342928274566001412CE /* ActTableViewCell.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
