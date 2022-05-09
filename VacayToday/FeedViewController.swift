@@ -17,13 +17,21 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var trips = [[String:Any]]()
     var onEditAction: ((Any) -> Void)?
+    let myRefreshControl = UIRefreshControl(); // add refresh loader on top of page
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        print(modelController.user)
+        // add loader in the current controller, action on func loadTweets()
+                self.myRefreshControl.addTarget(self, action: #selector(reloadAPI), for: .valueChanged)
+                collectionView.refreshControl = self.myRefreshControl;
         getMyTrips()
+    }
+    
+    @objc func reloadAPI() {
+        getMyTrips()
+        self.myRefreshControl.endRefreshing();
     }
     
     func getMyTrips() {

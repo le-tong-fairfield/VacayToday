@@ -109,8 +109,19 @@ class EditTripViewController: UIViewController {
             "is_published": false,
             "created_by": modelController.user.userId,
         ]
+        var params2 : [String: Any] = [
+            "name": titleField.text!,
+            "description": tripIntroField.text!,
+            "num_people": numPeopleField.text!,
+            "is_published": false,
+            "created_by": modelController.user.userId,
+              "start_on": "",
+              "end_on": "",
+              "likes": 0,
+              "thumb_url": ""
+            ]
         if(vcFromManage == nil) {
-            createTripAPI(parameters: parameters)
+            createTripAPI(parameters: params2)
         } else if (isPublishing) {
             parameters.updateValue(true, forKey: "is_published")
             updateTripAPI(parameters: parameters)
