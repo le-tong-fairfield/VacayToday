@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F237BC528289D8F00238555 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F237BC428289D8F00238555 /* ProfileViewController.swift */; };
 		4F29200F28283951000237BA /* ManageTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29200E28283951000237BA /* ManageTripViewController.swift */; };
 		4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F567824280E1A3400E98764 /* AppDelegate.swift */; };
 		4F567827280E1A3400E98764 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F567826280E1A3400E98764 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F237BC428289D8F00238555 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4F29200E28283951000237BA /* ManageTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTripViewController.swift; sourceTree = "<group>"; };
 		4F567821280E1A3400E98764 /* VacayToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacayToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F567824280E1A3400E98764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				F92A9E82281761B000443050 /* LoginViewController.swift */,
 				F97580CD281F759400C1A929 /* RegisterViewController.swift */,
 				4F29200E28283951000237BA /* ManageTripViewController.swift */,
+				4F237BC428289D8F00238555 /* ProfileViewController.swift */,
 			);
 			path = VacayToday;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				F92E75D728276306007BEB43 /* ExploreTabTableViewController.swift in Sources */,
 				4F567829280E1A3400E98764 /* ViewController.swift in Sources */,
 				F97580CE281F759400C1A929 /* RegisterViewController.swift in Sources */,
+				4F237BC528289D8F00238555 /* ProfileViewController.swift in Sources */,
 				4F567825280E1A3400E98764 /* AppDelegate.swift in Sources */,
 				70DE2AF72828915500D62F37 /* EditTripViewController.swift in Sources */,
 				F92E75D928276348007BEB43 /* ExploreTabTableViewCell.swift in Sources */,
