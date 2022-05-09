@@ -22,6 +22,7 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
     let dateFormatterPrint = DateFormatter() // (MM/dd)
     let timeFormatterPrint = DateFormatter() // time AM/PM
     let dateForPrint = DateFormatter() // yyyy-MM-dd
+    let myRefreshControl = UIRefreshControl(); // add refresh loader on top of page
 
     
     @IBOutlet weak var actTableView: UITableView!
@@ -34,6 +35,10 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
             createPickerView()
             dismissPickerView()
             dateText.delegate = self
+        
+        // add loader in the current controller, action on func loadTweets()
+                self.myRefreshControl.addTarget(self, action: #selector(reloadAPI), for: .valueChanged)
+                actTableView.refreshControl = self.myRefreshControl;
             
             actTableView.rowHeight = 125;
             actTableView.delegate = self;
@@ -84,6 +89,12 @@ class ItineraryViewController: UIViewController, UITableViewDelegate, UITableVie
         func reloadData() {
             self.actTableView.reloadData();
         }
+    
+    @objc func reloadAPI() {
+        getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/get/\(modelController.trip.tripId)", isGettingActs: true)
+        getAPI(endpoint: "https://vacaytoday.herokuapp.com/api/trip/activities/getdates/\(modelController.trip.tripId)", isGettingActs: false)
+        self.myRefreshControl.endRefreshing();
+    }
     
     func getCatIcon(catId:Int) -> String {
         switch(catId){
