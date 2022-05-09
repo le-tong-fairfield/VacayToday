@@ -16,6 +16,8 @@ class ManageTripViewController: UIViewController {
     
     @IBOutlet weak var usersAdded: UITextField!
     
+    var modelController: ModelController!
+    
     @IBAction func doneButton(_ sender: Any) {
         let userInput = usersAdded.text!
         let separator = CharacterSet(charactersIn: ",")
@@ -38,7 +40,9 @@ class ManageTripViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let vc = segue.destination as? EditTripViewController {
+            vc.modelController = modelController;
+        }
     }
     
 
