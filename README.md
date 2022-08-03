@@ -37,19 +37,20 @@ Users can also share their own travel plans and view other users' public plans t
 
 **Required Must-have Stories**
 
-1. User can create a new account
-2. User can login 
+1. [x] User can create a new account
+2. [x] User can login 
 3. User can logout
-4. User can create a profile
-5. User can create a trip folder 
-    a. User can create trip details inside the folder
-    b. User can switch between sub-tabs to view Itinerary (default), Lodging, Food, Transportation, Places
-    c. User can track expenses at different places on trip itinerary / Each tabs keep track of expenses, itinerary sums it up (choose 1)
-6. User can add friends and give them permission to modify specific travel plans
-4. User can choose to publish their folder 
-5. User can explore other peole's trip folders
-6. User can like others folders
-7. User can save the folders for later visit.
+4. [x] User can create a profile
+5. [x] User can create a trip folder 
+6. User can create trip details inside the folder
+7. [x] User can switch between sub-tabs to view Itinerary (default), Lodging, Food, Transportation, Places
+8. [x] User can view and scroll through a list of activities (in Itinerary Tab), places (in Place Tab), and lodging (in Lodging Tab)
+9. User can track expenses at different places on trip itinerary / Each tabs keep track of expenses, itinerary sums it up (choose 1)
+10. User can add friends and give them permission to modify specific travel plans
+11. User can choose to publish their folder 
+12. [x] User can explore other peole's trip folders
+13. User can like others folders
+14. User can save the folders for later visit.
 
 **Optional Nice-to-have Stories**
 
@@ -57,6 +58,13 @@ Users can also share their own travel plans and view other users' public plans t
 2. User can publish photos of their travel
 3. User can link items in internary to items in other tabs
 4. User can link their bookings from other applications to their travel folders
+
+### App Walkthrough GIF
+
+<img src="http://g.recordit.co/lAteqU7M0x.gif" width=250><br>
+<img src="http://g.recordit.co/ANnAIz0bOX.gif" width=250><br>
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/32797557/166179043-605598c1-b2d6-4cfc-b02b-65aac60333d3.gif)
 
 ### 2. Screen Archetypes
 * Launch Screen
